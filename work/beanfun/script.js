@@ -24,9 +24,9 @@ tabs.forEach((tab, index) => {
 });
 
 const themeData = {
-  red: { image: 'assets/landing-red.jpg', color: '#a6090d', name: '紅色' },
-  navy: { image: 'assets/landing-navy.jpg', color: '#111856', name: '藍色' },
-  pink: { image: 'assets/landing-live.jpg', color: '#b60083', name: '粉色' }
+  red: { image: 'assets/landing-red.jpg.webp', color: '#a6090d', name: '紅色' },
+  navy: { image: 'assets/landing-navy.jpg.webp', color: '#111856', name: '藍色' },
+  pink: { image: 'assets/landing-live.jpg.webp', color: '#b60083', name: '粉色' }
 };
 const themePreview = document.querySelector('.theme-preview');
 const themeImage = document.getElementById('theme-image');
@@ -54,7 +54,7 @@ const homeCompareScreen = homeHotspot.closest('.compare-image');
 homeHotspot.addEventListener('click', () => {
   const showMine = homeCompareScreen.dataset.view !== 'mine';
   homeCompareScreen.dataset.view = showMine ? 'mine' : 'feed';
-  homeAfterImage.src = showMine ? 'assets/mine-new.jpg' : 'assets/feed-theme-other.jpg';
+  homeAfterImage.src = showMine ? 'assets/mine-new.jpg.webp' : 'assets/feed-theme-other.jpg.webp';
   homeAfterImage.alt = showMine
     ? '新版 SHOW 我的資產頁，集中整理使用者已發布的內容'
     : '新版 SHOW 動態頁，主題列、活動提示與展覽內容清晰呈現';

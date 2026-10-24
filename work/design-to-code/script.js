@@ -22,21 +22,21 @@
   // ---------- 02 demo ----------
   const INPUTS = {
     ui: {
-      thumbs: ["assets/ui-select.jpg", "assets/ui-dialog.jpg", "assets/ui-after.jpg"],
+      thumbs: ["assets/ui-select.jpg.webp", "assets/ui-dialog.jpg.webp", "assets/ui-after.jpg.webp"],
       prompt:
         "以下為三張UI圖互動流程：在Gallery頁，點右上 Select 進入編輯模式，選取照片後出現 Bottom Sheet，點垃圾桶跳出確認視窗，click delete 就會刪除，請依照Guidelines.md製作。",
       used: ["AppBarMain", "Nav", "Button", "CheckboxSingle", "BottomSheet", "Dialog", "Icon", "GestureBar"],
       caption: "<b>AI 生成的相簿原型 · 約 90% 還原</b><br>可直接操作：Select → 選照片 → Delete",
     },
     wf: {
-      thumbs: ["assets/wf-input.jpg"],
+      thumbs: ["assets/wf-input.jpg.webp"],
       prompt:
         "以下為UX圖互動流程：在Gallery頁，點右上 Select 進入編輯模式，選取照片後出現 Bottom Sheet，點垃圾桶跳出確認視窗，click delete 就會刪除，請依照Guidelines.md製作。",
       used: ["AppBarMain", "Nav", "Button", "CheckboxSingle", "BottomSheet", "Dialog", "GestureBar"],
       steps: [
-        ["assets/wf-select.jpg", "① 選取 3 個項目"],
-        ["assets/wf-dialog.jpg", "② 刪除確認"],
-        ["assets/wf-after.jpg", "③ 刪除後版面"],
+        ["assets/wf-select.jpg.webp", "① 選取 3 個項目"],
+        ["assets/wf-dialog.jpg.webp", "② 刪除確認"],
+        ["assets/wf-after.jpg.webp", "③ 刪除後版面"],
       ],
       caption: "<b>Wireframe 生成 · 約 70% 還原</b><br>結構與互動已套用組件，視覺需再 Prompt 精修",
     },
@@ -148,7 +148,7 @@
   const HOW = {
     tokens: {
       figTitle: "Figma Variables · Text Styles",
-      fig: `<img src="assets/fig-tokens.jpg" alt="Figma 中的 EAE Color Token 與文字樣式" loading="lazy">`,
+      fig: `<img src="assets/fig-tokens.jpg.webp" alt="Figma 中的 EAE Color Token 與文字樣式" loading="lazy">`,
       figText: "Design System 裡的色票、元件狀態色與字級，原本分散在 Figma 的 Variables 與 Text Styles。",
       codeTitle: "styles/globals.css",
       code: `<span class="c">/* Surface · Accent · Text */</span>
@@ -172,7 +172,7 @@
     },
     tsx: {
       figTitle: "Figma Components · Variants",
-      fig: `<div class="shot-pair"><img src="assets/fig-buttons.jpg" alt="Figma 中 Buttons 組件的各種狀態" loading="lazy"><img src="assets/make-tsx.jpg" alt="Figma Make 中產出的 AppBar.tsx" loading="lazy"></div>`,
+      fig: `<div class="shot-pair"><img src="assets/fig-buttons.jpg.webp" alt="Figma 中 Buttons 組件的各種狀態" loading="lazy"><img src="assets/make-tsx.jpg.webp" alt="Figma Make 中產出的 AppBar.tsx" loading="lazy"></div>`,
       figText: "每個 Figma 組件連同 Variants（大小、狀態、樣式）透過 Figma AI Prompt 或是 Figma toCode 插件結構化成一支 .tsx，放進 components 中。",
       codeTitle: "components/Omni/Buttons.tsx",
       code: `<span class="k">export type</span> ButtonVariant =
@@ -193,7 +193,7 @@
     },
     guide: {
       figTitle: "UI Layout Guideline",
-      fig: `<img src="assets/fig-bottom-sheet.png?v=2" alt="Figma 中 Bottom sheet 的轉場規範：進場、展開與收回的 easing 與時間" loading="lazy">`,
+      fig: `<img src="assets/fig-bottom-sheet.png.webp?v=2" alt="Figma 中 Bottom sheet 的轉場規範：進場、展開與收回的 easing 與時間" loading="lazy">`,
       figText: "版面結構、間距、轉場與使用規範，原本是給人看的 Figma 頁面，AI 讀不到。",
       codeTitle: "guidelines/Guidelines.md",
       code: `<span class="h">### Generation &amp; Implementation Rules</span>

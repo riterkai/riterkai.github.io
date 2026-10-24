@@ -132,7 +132,7 @@
       });
     });
   }
-  docTabs('doc', 'doc', docs, '.jpg', 'UX 稿');
+  docTabs('doc', 'doc', docs, '.jpg.webp', 'UX 稿');
   docTabs('err', 'err', errors, '', 'UX 文檔');
 })();
 
@@ -169,7 +169,7 @@
     timers.forEach(clearTimeout); timers = [];
     tabs.forEach(t => { const on = t.dataset.how === key; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
     $('how-panel').setAttribute('aria-labelledby', `how-tab-${key}`);
-    if (!video.src.endsWith(`${s.video}.mp4`)) { video.src = `assets/${s.video}.mp4`; video.poster = `assets/${s.video}.jpg`; }
+    if (!video.src.endsWith(`${s.video}.mp4`)) { video.src = `assets/${s.video}.mp4`; video.poster = `assets/${s.video}.jpg.webp`; }
     video.play().catch(() => {});
     $('how-trigger').textContent = s.trigger;
     $('how-input-note').textContent = s.input;

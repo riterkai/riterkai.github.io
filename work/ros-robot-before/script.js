@@ -190,7 +190,7 @@
       headline: "純文檔比對效率低，需要更好的可視化工具",
       body: "機器人實驗已用程式記錄移動過程的數據 CSV，但沒有整合平台時，要在多個 CSV 檔之間對比找問題；也沒有同步的實際移動畫面，得重新回放影片找到對應的那一秒。",
       points: ["驗證機器人沿指定軌跡移動時，數據與移動策略是否同步", "對照實際畫面與數據，發現操控問題與指令精度", "檢查機器人軌跡畫面與 MR 虛擬實境畫面是否即時同步"],
-      media: [["step-01.jpg?v=2", "實驗影片、log.csv 與 pose.csv：過去需要逐一對照"]],
+      media: [["step-01.jpg.webp?v=2", "實驗影片、log.csv 與 pose.csv：過去需要逐一對照"]],
     },
     {
       key: "wire",
@@ -199,7 +199,7 @@
       headline: "先用 Figma Wireframe 把資訊分區規劃出來",
       body: "第一版只畫結構，不做視覺：雙畫面影像區加上同步的圖表區，讓後面交給 AI 生成時，版面意圖是清楚的。",
       points: ["雙畫面影像區 + 圖表數據同步顯示", "影片畫面與下方折線圖時間軸同步", "只列重點資訊：功率、速度、角速度"],
-      media: [["step-02.jpg?v=2", "Figma 繪製的第一版 Wireframe"]],
+      media: [["step-02.jpg.webp?v=2", "Figma 繪製的第一版 Wireframe"]],
     },
     {
       key: "stack",
@@ -208,7 +208,7 @@
       headline: "開始 Vibe Coding 前，先讓 AI 確認實作框架",
       body: "比較純 Python 圖表方案與 Web 方案後選擇網頁：HTML5 video 原生支援播放與 seek，兩支影片用 currentTime 就能鎖在一起，本地只需要一個 Flask server。框架先定好，後續加功能才不會推倒重來。",
       points: ["純 Python 數據圖表方案 vs Web Base 方案", "Flask + HTML，影片與 CSV 放在 static/", "圖表點擊直接跳到影片時間點"],
-      media: [["step-03.jpg", "技術框架：Flask 提供本地檔案，網頁同步影片與 CSV 圖表"]],
+      media: [["step-03.jpg.webp", "技術框架：Flask 提供本地檔案，網頁同步影片與 CSV 圖表"]],
     },
     {
       key: "mvp",
@@ -217,7 +217,7 @@
       headline: "輸入 Wireframe 與技術方案，第一版即完成核心驗證",
       body: "把 Wireframe 與選定的技術方案交給 Claude Code，直接產出能跑的第一版，用真實的實驗資料驗證核心假設是否成立。",
       points: ["成功讀取機器人移動畫面與 MR 虛擬實境畫面", "解析 CSV 欄位並轉成折線圖", "影片秒數與數據時間軸同步播放"],
-      media: [["step-04.jpg", "Claude Code 產出的第一版 MVP"]],
+      media: [["step-04.jpg.webp", "Claude Code 產出的第一版 MVP"]],
     },
     {
       key: "feature",
@@ -227,7 +227,7 @@
       headline: "能用文字描述的需求，直接用 Prompt 執行",
       body: "以新增產品功能為主的需求，用一句話描述欄位與顯示位置就能完成，讓迭代速度跟得上實驗節奏。",
       points: ["從 CSV 讀取圈數、座標、目標點，以浮層顯示在影片右下角", "數值區塊新增左右輪速度", "速度欄位加下拉，展開左右輪速度兩條圖表"],
-      media: [["step-05.jpg?v=2", "實際使用的 Prompt 與新增的浮層資訊、左右輪速度"]],
+      media: [["step-05.jpg.webp?v=2", "實際使用的 Prompt 與新增的浮層資訊、左右輪速度"]],
     },
     {
       key: "figma",
@@ -237,7 +237,7 @@
       headline: "在 Figma 確認視覺，再交給 AI 完成體驗優化",
       body: "方向指示與卡片式版面等難以用文字說清楚的需求，先在 Figma 試出樣式，再把修改後的 Frame 回傳給 Claude Code。接著調整圖表密度與顯示模式，讓介面更好讀、數據更好比對。",
       points: ["在 Figma 確認方向標示、灰藍底與白色卡片，再回傳實作", "折線圖降低配色飽和度，加入 LOD，以平均值避免數據過密", "新增單視圖模式，把更多空間留給數據表與多軌圖表", "數據卡片依寬度自適應為一排 2 / 3 / 6 個"],
-      media: [["step-06.jpg?v=3", "Figma 精修後回傳實作的畫面"]],
+      media: [["step-06.jpg.webp?v=3", "Figma 精修後回傳實作的畫面"]],
     },
     {
       key: "iteration",
@@ -246,7 +246,7 @@
       headline: "加入 AI 助手與 DTW，讓診斷更完整",
       body: "在同步回放與數據圖表的基礎上，持續加入 AI 數據診斷助手與 DTW 軌跡比對。前者依當下畫面與數據整理異常和建議，後者量化機器人與 ArUco 軌跡的差異，協助研究者檢查虛實位置是否一致。",
       points: ["AI 助手：擷取當下畫面與 snapshot，支援含圖或只送數據", "With RAG / No RAG 對照，比較規則文件對分析的影響", "DTW：比對機器人與 ArUco 軌跡，顯示距離與正規化結果"],
-      media: [["step-07.jpg", "AI 數據診斷助手與 DTW 軌跡比對"]],
+      media: [["step-07.jpg.webp", "AI 數據診斷助手與 DTW 軌跡比對"]],
     },
   ]
 
