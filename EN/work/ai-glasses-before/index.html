@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <base href="/work/ai-glasses-before/">
+  <script src="/shared/locale-route.js"></script>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c12">
+  <meta name="description" content="HTC VIVE Eagle UX 設計案例：連結 AI 眼鏡、語音與手機 App，定義 AI 對話、記憶與跨裝置異常處理的互動規則。">
+  <title>VIVE Eagle AI 智慧眼鏡互動設計｜Kevin Chang</title>
+  <link rel="stylesheet" href="/shared/fonts/google-eeca43cd51fa.css">
+  <link rel="stylesheet" href="../../shared-before/type.css">
+  <link rel="stylesheet" href="styles.css?v=1792565847">
+  <link rel="stylesheet" href="../../shared-before/case-shell.css?v=1792565847">
+  <link rel="stylesheet" href="../../shared-before/case-kv.css?v=1792565847">
+  <script src="../../shared-before/transition.js?v=1791951012"></script>
+  <script src="../../shared-before/projects.js?v=1791949592" defer></script>
+  <script src="../../shared-before/case-shell.js?v=1791948424" defer data-slug="ai-glasses"></script>
+  <script src="script.js" defer></script>
+  <script src="../../shared/compare.js" data-before="../ai-glasses-before/" data-after="../ai-glasses/" data-current="before"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至內容</a>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="返回頁首"><span class="brand-mark" aria-hidden="true">K<span>C</span></span><span>KEVIN CHANG<small>PRODUCT DESIGN / 04</small></span></a>
+    <nav aria-label="頁面導覽"><a href="#how">怎麼用</a><a href="#interaction">硬體交互</a><a href="#app">App UX</a><a href="#recovery">錯誤處理</a></nav>
+    <span class="header-project">HTC VIVE</span>
+  </header>
+  <main id="main">
+    <section data-kv class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-layout" data-kv-grid>
+          <div class="hero-copy" data-kv-copy>
+            <p class="eyebrow" data-kv-eyebrow><span class="signal" aria-hidden="true"></span> UX CASE STUDY <span class="eyebrow-line"></span> AI WEARABLE EXPERIENCE</p>
+            <h1 id="hero-title">HTC <span>VIVE EAGLE</span></h1>
+            <p class="hero-zh" data-kv-sub>AI 智慧眼鏡互動設計</p>
+            <p class="hero-intro" data-kv-lead>定義智慧眼鏡的硬體互動流程，並整合手機 App，打造眼鏡與手機協同的跨裝置體驗。</p>
+            <a data-kv-cta class="text-link" href="#how">探索設計 <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-art" data-kv-art>
+            <img class="eagle-image" src="assets/eagle-kv-20261018.png" alt="HTC VIVE Eagle 黑色 AI 智慧眼鏡" fetchpriority="high" width="1248" height="1186">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-id"><span>01 / HOW IT WORKS</span><span>GLASSES → VOICE → APP</span></div>
+        <div class="section-heading"><h2 id="how-title">語音和按鍵操作眼鏡</h2><p>用語音或按鍵下指令，鏡頭取得眼前的畫面，眼鏡用提示音、LED 與語音回應；內容之後在手機 App 查看。</p></div>
+        <div class="tabs how-tabs" role="tablist" aria-label="使用情境">
+          <button role="tab" id="how-tab-ask" aria-controls="how-panel" aria-selected="true" data-how="ask">問 AI</button>
+          <button role="tab" id="how-tab-memory" aria-controls="how-panel" aria-selected="false" tabindex="-1" data-how="memory">幫我記住</button>
+          <button role="tab" id="how-tab-capture" aria-controls="how-panel" aria-selected="false" tabindex="-1" data-how="capture">拍照錄影</button>
+        </div>
+        <div class="how-stage" id="how-panel" role="tabpanel" aria-labelledby="how-tab-ask">
+          <figure class="how-col how-input">
+            <p class="how-step"><span>01</span>輸入</p>
+            <div class="how-video"><video id="how-video" src="assets/use-ask.mp4" poster="assets/use-ask.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="how-trigger" id="how-trigger">「Hey VIVE」</span></div>
+            <figcaption id="how-input-note">說出喚醒詞，或長按 AI 鍵後直接提問。</figcaption>
+          </figure>
+          <div class="how-arrow" aria-hidden="true">→</div>
+          <figure class="how-col how-voice">
+            <p class="how-step"><span>02</span>眼鏡回應</p>
+            <div class="how-chat" id="how-chat"></div>
+            <figcaption id="how-voice-note">沒有畫面，靠聲音與燈號確認狀態。</figcaption>
+          </figure>
+          <div class="how-arrow" aria-hidden="true">→</div>
+          <figure class="how-col how-app">
+            <p class="how-step"><span>03</span>之後在 App</p>
+            <button class="how-phone" id="how-phone" data-image="assets/ai-history.webp" data-caption="AI 對話紀錄｜專案 UI 畫面" data-phone="true" aria-label="放大查看 App 畫面"><img id="how-screen" src="assets/ai-history.webp" alt="App 的 AI 對話紀錄畫面" loading="lazy"></button>
+            <figcaption id="how-app-note">AI 對話紀錄：回看剛才問過的問題與回答。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section interaction-section" id="interaction" aria-labelledby="interaction-title">
+      <div class="wrap">
+        <div class="section-id"><span>02 / HARDWARE INTERACTION</span><span>CORE UX WORK</span></div>
+        <div class="section-heading"><h2 id="interaction-title">定義眼鏡的交互流程</h2><p>每個操作之後，眼鏡在什麼時機用提示音、LED 或語音回應，包含等待、打斷與失敗。</p></div>
+        <div class="tabs" role="tablist" aria-label="人機互動流程">
+          <button role="tab" id="flow-tab-ai" aria-controls="flow-panel" aria-selected="true" data-flow="ai">AI 對話</button>
+          <button role="tab" id="flow-tab-add" aria-controls="flow-panel" aria-selected="false" tabindex="-1" data-flow="add">建立記憶</button>
+          <button role="tab" id="flow-tab-recall" aria-controls="flow-panel" aria-selected="false" tabindex="-1" data-flow="recall">查找記憶</button>
+        </div>
+        <div class="flow-panel" id="flow-panel" role="tabpanel" aria-labelledby="flow-tab-ai" tabindex="0"></div>
+      </div>
+    </section>
+
+    <section class="section app-section" id="app" aria-labelledby="app-title">
+      <div class="wrap">
+        <div class="section-id"><span>03 / COMPANION APP</span><span>AI QUERY · MEMORY</span></div>
+        <div class="section-heading"><h2 id="app-title">App 的 AI 對話與記憶設計</h2><p>我負責的兩個模組。以下是交付開發的 UX 稿，標出每個畫面的狀態與操作。</p></div>
+        <div class="tabs" role="tablist" aria-label="App UX 稿">
+          <button role="tab" id="doc-tab-history" aria-controls="doc-panel" aria-selected="true" data-doc="history">AI 對話 · 歷史紀錄</button>
+          <button role="tab" id="doc-tab-list" aria-controls="doc-panel" aria-selected="false" tabindex="-1" data-doc="list">記憶 · 備忘錄</button>
+          <button role="tab" id="doc-tab-add" aria-controls="doc-panel" aria-selected="false" tabindex="-1" data-doc="add">添加備忘錄</button>
+          <button role="tab" id="doc-tab-search" aria-controls="doc-panel" aria-selected="false" tabindex="-1" data-doc="search">搜尋記憶</button>
+        </div>
+        <div class="doc-panel" id="doc-panel" role="tabpanel" aria-labelledby="doc-tab-history">
+          <button class="doc-image doc-fit" id="doc-image" data-image="assets/ux-ai-history.jpg" data-caption="AI 對話 · 歷史紀錄｜UX 稿"><img id="doc-img" src="assets/ux-ai-history.jpg" alt="AI 對話歷史紀錄 UX 稿" loading="lazy"><span class="doc-zoom">點擊放大 ↗</span></button>
+          <p class="doc-note" id="doc-note">首頁入口、對話詳情、圖片保存、選擇與分享，以及無紀錄與分享上限等狀態。</p>
+        </div>
+        <div class="source-row"><p>App 資訊架構中，綠色為我負責的模組。</p><button class="source-link" data-image="assets/app-ia.webp" data-caption="Eagle 配套 App 資訊架構｜綠色為負責模組">查看 App 資訊架構 <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="section recovery-section" id="recovery" aria-labelledby="recovery-title">
+      <div class="wrap">
+        <div class="section-id"><span>04 / ERROR HANDLING</span><span>CONNECTION LOST</span></div>
+        <div class="section-heading"><h2 id="recovery-title">定義斷線時的處理方式</h2><p>眼鏡與手機斷線時，各功能在操作前、操作中如何處理，並用語音、對話框或通知告知。</p></div>
+        <div class="tabs" role="tablist" aria-label="錯誤處理文檔">
+          <button role="tab" id="err-tab-list" aria-controls="err-panel" aria-selected="true" data-err="list">行為列表</button>
+          <button role="tab" id="err-tab-before" aria-controls="err-panel" aria-selected="false" tabindex="-1" data-err="before">操作前斷線</button>
+          <button role="tab" id="err-tab-during" aria-controls="err-panel" aria-selected="false" tabindex="-1" data-err="during">操作中斷線</button>
+        </div>
+        <div class="doc-panel" id="err-panel" role="tabpanel" aria-labelledby="err-tab-list">
+          <button class="doc-image doc-fit" id="err-image" data-image="assets/connection-matrix.webp" data-caption="連接丟失行為列表｜UX 文檔"><img id="err-img" src="assets/connection-matrix.webp" alt="連接丟失行為列表 UX 文檔" loading="lazy"><span class="doc-zoom">點擊放大 ↗</span></button>
+          <p class="doc-note" id="err-note">每個功能在操作前、操作中斷線時的處理（阻擋、中斷或失敗），以及用語音還是手機通知告知。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div><span>KEVIN CHANG / UX PORTFOLIO</span><strong>VIVE EAGLE</strong></div><a href="#top">BACK TO TOP ↑</a></div></footer>
+  <dialog id="image-dialog" aria-labelledby="image-caption"><div class="dialog-bar"><p id="image-caption"></p><button id="close-image" aria-label="關閉圖片">×</button></div><div class="dialog-tools"><button id="zoom-out" aria-label="縮小圖片">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="放大圖片">+</button><button id="zoom-reset">符合視窗</button><span>可捲動查看細節 · Esc 關閉</span></div><div class="dialog-scroll"><img id="dialog-image" alt=""></div></dialog>
+</body>
+</html>

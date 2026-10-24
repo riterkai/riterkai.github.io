@@ -1,0 +1,225 @@
+:root{--dark:#080c12;--panel:#111923;--paper:#f4f5f2;--ink:#101820;--muted:#6c7880;--line:#d7ddda;--mint:#b6f5e5;font-family:Arial,"PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;min-width:320px;background:var(--paper)}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}img{display:block;max-width:100%}h1,h2,h3,p{margin:0}p{line-height:1.7}::selection{background:var(--mint);color:#061017}:focus-visible{outline:2px solid #55dbbf;outline-offset:4px}.skip-link{position:absolute;top:-100px;left:16px;z-index:100;background:white;padding:12px}.skip-link:focus{top:16px}.wrap{width:min(1400px,calc(100% - 112px));margin:auto}.section-no{display:block;color:#4a6770;font-size:11px;font-weight:800;letter-spacing:.18em}.section-no:before{content:"";display:inline-block;width:28px;height:1px;background:currentColor;vertical-align:middle;margin-right:12px}.header{height:66px;background:var(--dark);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 56px;border-bottom:1px solid #ffffff25;gap:24px}.brand{display:flex;gap:13px;align-items:center;font-size:11px;font-weight:800;letter-spacing:.13em}.brand-mark{display:grid;place-items:center;border:1px solid #7bbcb3;border-radius:50%;width:36px;height:36px;font-size:11px;letter-spacing:-.12em;padding-right:2px}.brand-mark span{color:var(--mint)}.brand small{display:block;color:#7e949e;font-size:9px;letter-spacing:.2em;margin-top:4px;font-weight:500}.header nav{display:flex;gap:38px;color:#acbac0;font-size:12px}.header nav a:hover{color:var(--mint)}.header-project{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--mint)}.header-project i{font-style:normal;margin-left:5px}
+.hero{position:relative;background:radial-gradient(ellipse at 68% 38%,#173c42 0%,#0a1820 31%,#080c12 72%);color:#fff;overflow:hidden}.hero-grid{position:absolute;inset:0;opacity:.14;background-image:linear-gradient(#b6f5e522 1px,transparent 1px),linear-gradient(90deg,#b6f5e522 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,transparent 10%,black 100%)}.hero-inner{position:relative;padding-top:88px;padding-bottom:56px;min-height:590px;display:flex;flex-direction:column}.eyebrow{display:flex;align-items:center;gap:12px;color:#b9cacd;font-size:10px;font-weight:700;letter-spacing:.18em}.pulse,.live-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 15px var(--mint)}.eyebrow-line{width:36px;height:1px;background:#5b7579}.hero h1{font-size:clamp(64px,7.9vw,136px);line-height:.89;letter-spacing:-.07em;font-weight:900;margin-top:76px;white-space:nowrap}.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px #dcece9;letter-spacing:-.075em}.hero-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:end;gap:30px;padding-top:62px}.hero-bottom>div{display:grid;grid-template-columns:minmax(280px,490px) minmax(280px,500px);gap:75px;align-items:end}.hero-zh{font-size:clamp(22px,2vw,32px);line-height:1.4;letter-spacing:-.04em;font-weight:700}.hero-desc{max-width:500px;color:#aebfc4;font-size:14px}.round-link{display:grid;place-items:center;width:58px;height:58px;border:1px solid #82aca9;border-radius:50%;font-size:25px;color:var(--mint);transition:background .2s,transform .2s}.round-link:hover{background:#ffffff1a;transform:translateY(4px)}.hero-edge{position:absolute;right:0;top:102px;writing-mode:vertical-rl;font-size:10px;letter-spacing:.24em;color:#6f8f94}
+.demo-section{background:#e8eeeb;padding:110px 0 105px;scroll-margin-top:30px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:80px;margin-bottom:44px}.section-heading h2,.spec-top h2{font-size:clamp(38px,4.7vw,72px);line-height:1.12;letter-spacing:-.06em;margin-top:25px}.section-heading h2 em,.spec-top h2 em{font-style:normal;color:#627b78}.section-heading>p{max-width:380px;color:#4d6265;font-size:14px}.demo-shell{background:#10161d;border:1px solid #a5b5b6;box-shadow:0 24px 65px #0c303326}.demo-toolbar{height:56px;background:#0c1218;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 22px;border-bottom:1px solid #52646d;gap:15px}.demo-toolbar-title,.demo-actions{display:flex;align-items:center;gap:14px}.demo-toolbar-title strong{font-size:10px;letter-spacing:.16em}.demo-toolbar-title>span:last-child{font-size:9px;letter-spacing:.12em;color:#758c96;border-left:1px solid #4e626d;padding-left:14px}.demo-actions{gap:22px;font-size:11px;color:#b3c7ce}.demo-actions button{background:none;border:0;color:inherit;padding:7px 0}.demo-actions a:hover,.demo-actions button:hover{color:var(--mint)}.demo-window{width:100%;aspect-ratio:16/9;min-height:370px}.demo-window iframe{width:100%;height:100%;border:0;display:block}.demo-window:fullscreen{aspect-ratio:auto;height:100vh}.demo-foot{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-top:20px;font-size:10px;color:#607275;letter-spacing:.1em}.demo-foot p{font-size:12px;letter-spacing:0}.demo-foot b{color:#319f8b}
+.context-section{background:#fff;padding:100px 0;scroll-margin-top:20px}.context-layout{display:grid;grid-template-columns:1fr 1.65fr;gap:80px}.context-intro h2{font-size:clamp(30px,3vw,48px);line-height:1.25;letter-spacing:-.05em;margin-top:25px}.context-cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#cdd9d7;border:1px solid #cdd9d7}.context-cards article{background:#f7faf8;position:relative;min-height:232px;padding:28px 30px 38px}.context-index{font-size:10px;font-weight:800;letter-spacing:.16em;color:#568275}.context-cards h3{font-size:23px;letter-spacing:-.03em;margin:22px 0 12px}.context-cards p{font-size:13px;color:#5e7071;padding-right:18px}.context-arrow{position:absolute;right:26px;bottom:22px;font-size:20px;color:#448b78}
+.spec-section{background:#f4f5f2;padding:115px 0 130px;scroll-margin-top:20px}.spec-top{display:grid;grid-template-columns:1fr 2.25fr;gap:60px;align-items:start;border-top:1px solid #bdc9c8;padding-top:24px;margin-bottom:60px}.spec-top .section-no{margin-top:8px}.spec-top h2{margin-top:0}.spec-top p{color:#5f7173;font-size:14px;margin-top:20px}.spec-explorer{display:grid;grid-template-columns:270px minmax(0,1fr);background:#fff;border:1px solid #d5dddd;min-height:700px}.spec-sidebar{border-right:1px solid #d5dddd;background:#edf2ef;padding:27px 0}.spec-group+ .spec-group{margin-top:27px;border-top:1px solid #cdd9d6;padding-top:28px}.spec-group h3{font-size:11px;color:#407a70;letter-spacing:.13em;padding:0 24px;margin-bottom:11px}.spec-group h3 span{color:#1f3034;letter-spacing:.06em;margin-left:8px}.spec-tab{width:100%;display:flex;justify-content:space-between;align-items:center;border:0;border-left:3px solid transparent;background:transparent;text-align:left;color:#536368;padding:12px 24px 12px 21px;font-size:14px}.spec-tab:hover{background:#e2ebe7;color:#122928}.spec-tab[aria-selected="true"]{border-left-color:#3daf91;background:#dceae3;color:#102725;font-weight:700}.spec-tab span:last-child{font-size:15px;color:#658a83}.spec-panel{padding:48px min(5vw,72px) 54px;min-width:0}.spec-kicker{font-size:11px;color:#4c8575;font-weight:800;letter-spacing:.15em}.spec-panel h3{font-size:clamp(29px,3vw,45px);letter-spacing:-.05em;line-height:1.15;margin:18px 0}.spec-lead{font-size:16px;color:#485f62;max-width:760px}.spec-points{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:28px 0 36px}.spec-point{border-top:1px solid #d0dad7;padding-top:15px}.spec-point strong{display:block;font-size:13px;margin-bottom:5px}.spec-point p{font-size:12px;color:#627578}.spec-figure{margin:0}.spec-image-button{width:100%;border:0;padding:0;background:#15212a;position:relative;display:block;overflow:hidden;cursor:zoom-in}.spec-image-button img{width:100%;height:auto;max-height:500px;object-fit:contain}.spec-image-button span{position:absolute;right:15px;bottom:15px;color:#fff;background:#101b21d9;padding:9px 12px;font-size:11px;letter-spacing:.07em}.spec-figure figcaption{color:#748387;font-size:11px;margin-top:10px}.spec-source{margin-top:25px;font-size:11px;color:#719087}.spec-source a{text-decoration:underline;text-underline-offset:3px}.footer{background:#080d12;color:#fff;padding:70px 0}.footer-inner{display:flex;justify-content:space-between;align-items:end}.footer span{font-size:10px;letter-spacing:.18em;color:#89a4a9}.footer strong{font-size:28px;line-height:1.05;letter-spacing:-.04em;display:block;margin-top:18px}.footer a{font-size:11px;letter-spacing:.14em;color:var(--mint)}
+#image-dialog{border:0;background:#10171d;color:white;padding:0;width:min(95vw,1600px);max-height:92vh;box-shadow:0 25px 80px #0009}#image-dialog::backdrop{background:#020708d9}.dialog-bar{height:52px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff33;font-size:12px}.dialog-bar button{border:0;background:none;color:#fff;font-size:19px}.dialog-scroll{overflow:auto;max-height:calc(92vh - 52px)}.dialog-scroll img{width:100%;max-width:none;height:auto}
+@media(max-width:1100px){.wrap{width:calc(100% - 64px)}.header{padding:0 32px}.hero-inner{min-height:560px}.hero h1{font-size:clamp(60px,8vw,98px)}.hero-bottom>div{gap:30px}.context-layout{grid-template-columns:1fr;gap:30px}.spec-top{grid-template-columns:1fr 2fr}}
+@media(max-width:760px){.wrap{width:calc(100% - 40px)}.header{height:66px;padding:0 20px}.header nav{gap:15px;font-size:11px}.header-project{display:none}.brand small{display:none}.brand-mark{width:29px;height:29px}.hero-inner{min-height:550px;padding-top:54px;padding-bottom:36px}.hero h1{font-size:clamp(39px,10vw,69px);margin-top:100px}.hero h1 em{-webkit-text-stroke:.7px #e0eeee}.hero-bottom{padding-top:45px}.hero-bottom>div{grid-template-columns:1fr;gap:14px}.hero-zh{font-size:23px}.hero-desc{font-size:13px}.hero-edge{display:none}.round-link{width:44px;height:44px;flex:0 0 auto}.demo-section,.spec-section{padding:75px 0}.section-heading{display:block}.section-heading>p{margin-top:24px}.demo-toolbar{height:auto;min-height:53px;padding:13px}.demo-toolbar-title>span:last-child{display:none}.demo-actions{gap:10px}.demo-window{min-height:280px;aspect-ratio:1.15}.demo-foot>span:last-child{display:none}.context-section{padding:70px 0}.context-cards{grid-template-columns:1fr}.context-cards article{min-height:190px}.spec-top{display:block;margin-bottom:35px}.spec-top>div{margin-top:23px}.spec-explorer{display:block}.spec-sidebar{border-right:0;border-bottom:1px solid #d5dddd;padding:18px 0}.spec-group+ .spec-group{margin-top:15px;padding-top:15px}.spec-tabs{display:flex;overflow:auto;padding:0 15px;gap:6px}.spec-tab{white-space:nowrap;width:auto;border-left:0;border-bottom:3px solid transparent;padding:10px 12px}.spec-tab[aria-selected="true"]{border-left:0;border-bottom-color:#3daf91}.spec-tab span:last-child{display:none}.spec-panel{padding:35px 22px}.spec-points{grid-template-columns:1fr}.footer{padding:55px 0}}
+@media(max-width:420px){.header nav a:first-child{display:none}.eyebrow{font-size:9px}.eyebrow-line{width:15px}.hero h1{font-size:10vw}.demo-actions a{display:none}}
+@media(min-width:761px) and (max-width:1100px){.demo-heading{gap:30px}.demo-heading h2{font-size:clamp(34px,4vw,48px)}.demo-heading>p{max-width:300px}}
+/* Dark portfolio theme */
+:root{--paper:#080c12;--ink:#eef6f3;--muted:#9aafad;--line:#29403f}
+body{background:#080c12;color:#eef6f3}
+.demo-section{background:#0e171c}
+.section-no{color:#84b6ac}
+.section-heading h2,.spec-top h2,.context-intro h2{color:#f1f7f5}
+.section-heading h2 em,.spec-top h2 em{color:#a3d4ca}
+.section-heading>p,.spec-top p{color:#a6b9b8}
+.demo-shell{border-color:#35514e;box-shadow:0 24px 65px #02080988}
+.demo-window{overflow:hidden;background:#151d23}
+.demo-window iframe{transform:scale(1.09);transform-origin:center center}
+.demo-foot{color:#8ea7a4}
+.demo-foot p{color:#a6b9b8}
+.context-section{background:#0a1016}
+.context-cards{background:#2d4946;border-color:#2d4946}
+.context-cards article{background:#111d23}
+.context-cards h3{color:#eff7f4}
+.context-cards p{color:#a9bfbc}
+.context-index,.context-arrow{color:#8ccec0}
+.spec-section{background:#0d151b}
+.spec-top{border-top-color:#34514e}
+.spec-explorer{background:#101b21;border-color:#31504c}
+.spec-sidebar{background:#122027;border-right-color:#31504c}
+.spec-group+.spec-group{border-top-color:#31504c}
+.spec-group h3{color:#80bcae}
+.spec-group h3 span{color:#dfefeb}
+.spec-tab{color:#a9bdb9}
+.spec-tab:hover{background:#1b3134;color:#eef7f3}
+.spec-tab[aria-selected="true"]{background:#1b3b3b;color:#f2fffa;border-left-color:#77e0c7}
+.spec-tab span:last-child{color:#82b8ad}
+.spec-panel{background:#101b21}
+.spec-kicker{color:#87d7c5}
+.spec-panel h3{color:#f4faf8}
+.spec-lead{color:#b5c8c4}
+.spec-point{border-top-color:#35514f;display:flex;gap:13px}
+.spec-point strong{color:#e9f6f2}
+.spec-point p{color:#a3b8b5}
+.spec-point-marker{width:27px;height:27px;flex:0 0 27px;display:grid;place-items:center;border-radius:50%;background:#f3cf58;color:#16211f;font-size:12px;font-weight:900;line-height:1}
+.spec-image-button{background:#152027;border:1px solid #3a5350}
+.spec-figure figcaption,.spec-source{color:#91aaa5}
+.spec-source a{color:#b7eee0}
+@media(max-width:760px){.spec-sidebar{border-bottom-color:#31504c}.spec-tab[aria-selected="true"]{border-left:0;border-bottom-color:#77e0c7}.demo-window iframe{transform:scale(1.1)}}
+@media(min-width:761px) and (max-width:1100px){.spec-explorer{display:block}.spec-sidebar{border-right:0;border-bottom:1px solid #31504c;padding:20px 0}.spec-group+.spec-group{margin-top:14px;padding-top:14px}.spec-tabs{display:flex;overflow-x:auto;padding:0 20px;gap:8px}.spec-tab{width:auto;white-space:nowrap;border-left:0;border-bottom:3px solid transparent;padding:11px 15px}.spec-tab[aria-selected="true"]{border-left:0;border-bottom-color:#77e0c7}.spec-tab span:last-child{display:none}.spec-panel{padding:42px 36px}.spec-image-button img{max-height:560px}}
+.demo-window iframe{transform:scale(1.13)}
+@media(max-width:760px){.demo-window iframe{transform:scale(1.14)}}
+/* HTC blue accents */
+:root{--mint:#64cfff;--line:#29475a}
+::selection{background:#64cfff;color:#06121b}
+:focus-visible{outline-color:#32b8f2}
+.hero{background:radial-gradient(ellipse at 68% 38%,#16364e 0%,#0a1724 31%,#080c12 72%)}
+.hero-grid{background-image:linear-gradient(#64cfff22 1px,transparent 1px),linear-gradient(90deg,#64cfff22 1px,transparent 1px)}
+.brand-mark,.round-link{border-color:#6baac8}
+.brand small,.hero-desc,.section-heading>p,.spec-top p,.context-cards p,.spec-lead,.spec-point p{color:#a8bec9}
+.hero h1 em{-webkit-text-stroke-color:#d6eaf5}
+.hero-edge,.section-no,.demo-foot,.spec-figure figcaption,.spec-source{color:#85adc3}
+.section-heading h2 em,.spec-top h2 em{color:#84c9ec}
+.demo-shell,.spec-image-button{border-color:#31566c}
+.demo-foot b,.context-index,.context-arrow,.spec-group h3,.spec-kicker,.spec-source a{color:#64cfff}
+.context-cards{background:#274252;border-color:#274252}
+.spec-top{border-top-color:#315267}
+.spec-explorer{border-color:#315267}
+.spec-sidebar{border-right-color:#315267}
+.spec-group+.spec-group,.spec-point{border-top-color:#315267}
+.spec-tab:hover{background:#183042;color:#eff8fd}
+.spec-tab[aria-selected="true"]{background:#18384c;color:#f1faff;border-left-color:#3cbcf3}
+.spec-tab span:last-child{color:#83c9ed}
+@media(max-width:760px){.spec-sidebar{border-bottom-color:#315267}.spec-tab[aria-selected="true"]{border-left:0;border-bottom-color:#3cbcf3}}
+@media(min-width:761px) and (max-width:1100px){.spec-sidebar{border-bottom-color:#315267}.spec-tab[aria-selected="true"]{border-left:0;border-bottom-color:#3cbcf3}}
+/* Demo fits one screen: screenshot aspect, capped to the viewport height (the demo crops its top) */
+.demo-window iframe{transform:none}
+@media(min-width:761px){.demo-window{aspect-ratio:2000/1090;max-height:calc(100vh - 48px)}}
+.demo-window:fullscreen{max-height:none}
+
+/* Figma 222:47312: raised hero, floating axis object, brighter descriptions. */
+.hero-inner{padding-top:59px;padding-bottom:85px;min-height:590px}
+.hero-bottom>div{display:block}
+.hero-object{position:absolute;left:80%;top:46.7%;width:clamp(260px,22.25vw,334px);transform:translate(-50%,-50%);pointer-events:none}
+.hero-object img{width:100%;height:auto;animation:object-drift 8s ease-in-out infinite}
+@keyframes object-drift{0%,100%{transform:translate(-6px,6px) rotate(-1deg)}25%{transform:translate(7px,-9px) rotate(.8deg)}55%{transform:translate(10px,3px) rotate(1deg)}80%{transform:translate(-8px,-5px) rotate(-.6deg)}}
+.section-heading>p,.spec-top p,.context-cards p,.spec-lead,.spec-point p,.demo-foot p,.spec-figure figcaption,.spec-source{color:#dcdcdc}
+@media(max-width:1100px) and (min-width:761px){.hero-object{left:82%;width:230px;top:47%}.hero h1{font-size:7.2vw}}
+@media(max-width:760px){.hero-inner{min-height:0;padding-top:40px;padding-bottom:36px}.hero h1{margin-top:36px}.hero-object{position:relative;left:auto;top:auto;transform:none;width:210px;margin:20px auto 0}.hero-bottom{padding-top:20px}}
+@media(prefers-reduced-motion:reduce){.hero-object img{animation:none}}
+
+/* Give the prototype introduction enough room for two desktop lines. */
+@media(min-width:1101px){.demo-heading>p{max-width:480px;flex:0 0 480px}}
+
+.context-mode{display:inline-flex;align-items:center;gap:14px;margin-top:22px;color:#64cfff;font-size:16px;font-weight:700}.context-mode>span{font-size:35px;line-height:1;transition:transform .2s}.context-mode:hover>span{transform:translateX(5px)}
+
+.context-mode>span{display:inline-block;width:34px;height:2px;background:currentColor;font-size:0;line-height:0;position:relative;flex:0 0 34px}.context-mode>span::after{content:"";position:absolute;right:0;top:50%;width:8px;height:8px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:translateY(-50%) rotate(45deg)}
+
+/* Align mode links along the bottom of equal-height context cards. */
+.context-cards article{display:flex;flex-direction:column;align-items:flex-start}.context-cards p{margin-bottom:22px}.context-mode{margin-top:auto}
+
+/* Simplified spec presentation: full images and a content-sized frame. */
+.spec-top{display:block;margin-bottom:44px}.spec-top>div{margin-top:25px}.spec-top h2{font-size:clamp(38px,4.7vw,72px);line-height:1.12;letter-spacing:-.06em}
+.spec-explorer{min-height:0;align-items:stretch}.spec-panel{padding-bottom:32px}.spec-figure{margin-top:36px}
+.spec-image-scroll{width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:#64cfff #152027;scrollbar-width:thin}
+.spec-image-button{width:max-content;min-width:100%;display:flex;justify-content:center}.spec-image-button img{width:auto;height:500px;max-height:none;max-width:none;object-fit:contain}
+@media(max-width:760px){.spec-top h2{font-size:clamp(38px,4.7vw,72px)}.spec-image-button img{height:360px}.spec-panel{padding-bottom:22px}}
+
+.spec-image-button{min-width:0;justify-content:flex-start}.spec-image-scroll{width:fit-content;max-width:100%}
+
+@media(min-width:1101px){.spec-explorer{grid-template-columns:210px minmax(0,1fr)}}
+
+/* Figma 2213:27609: spec panel has 45px sides and 32px top/bottom. */
+.spec-panel{padding:32px 45px}.spec-lead{max-width:822px}
+@media(max-width:760px){.spec-panel{padding:24px 22px}}
+
+/* Header stays reachable: sticky, slides away while scrolling down, returns on scroll up. */
+.header{position:sticky;top:0;z-index:50;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.header.is-hidden{transform:translateY(-100%)}
+@media (prefers-reduced-motion:reduce){.header{transition:none}}
+
+/* Type scale (shared/type.css) + Figma 232:51498: one size/line per role, greys unified to #dcdcdc.
+   Arial stays the face; only size, leading and weight come from the shared roles. */
+.header nav{font-size:var(--t-small-size);line-height:var(--t-small-line);color:#dcdcdc}
+.header-project,.eyebrow,.section-no,.context-index,.spec-kicker,.spec-group h3,.footer span{font-size:var(--t-tag-size);line-height:var(--t-tag-line);font-weight:700;letter-spacing:.15em}
+.eyebrow{color:#dcdcdc}
+.brand small{color:#dcdcdc}
+.hero h1{font-size:var(--t-display-xl-size);line-height:var(--t-display-xl-line);font-weight:700;letter-spacing:-.07em}
+.hero-zh{font-size:var(--t-h4-size);line-height:var(--t-h4-line);font-weight:700;letter-spacing:-.04em;color:#fff}
+.section-heading h2,.spec-top h2{font-size:var(--t-h1-size);line-height:var(--t-h1-line);font-weight:700;letter-spacing:-.07em}
+.context-intro h2,.spec-panel h3{font-size:var(--t-h3-size);line-height:var(--t-h3-line);font-weight:700;letter-spacing:-.055em}
+.context-cards h3{font-size:var(--t-h5-size);line-height:var(--t-h5-line);font-weight:700;letter-spacing:-.03em}
+.context-mode{font-size:var(--t-h6-size);line-height:var(--t-h6-line);font-weight:700}
+.section-heading>p,.spec-top p,.spec-lead{font-size:var(--t-body-size);line-height:var(--t-body-line);color:#dcdcdc}
+.context-cards p,.spec-tab,.spec-point p,.demo-foot p,.spec-figure figcaption,.spec-source{font-size:var(--t-small-size);line-height:var(--t-small-line);color:#dcdcdc}
+.spec-point strong{font-size:var(--t-small-size);line-height:var(--t-small-line)}
+.spec-tab[aria-selected="true"]{color:#f1faff}
+.spec-group h3 span{color:#84c9ec}
+.spec-image-button span,.footer a{font-size:var(--t-btn-s-size);line-height:var(--t-btn-s-line);letter-spacing:.1em}
+.footer strong{font-size:var(--t-h4-size);line-height:1.05}
+@media(max-width:760px){.eyebrow{flex-wrap:wrap;row-gap:8px;letter-spacing:.12em}.eyebrow>span{white-space:nowrap}}
+/* Stacked (phone) layout: the intro paragraph spans the full column, not the desktop 380px cap. */
+@media(max-width:760px){.section-heading>p{max-width:none}}
+/* Section labels without the leading rule. */
+.section-no:before{content:none}
+/* Tablet widths: same hero as phones — the object sits centred below the tagline, never under the title. */
+@media(min-width:761px) and (max-width:1100px){.hero-inner{min-height:0;padding-bottom:48px}.hero h1{margin-top:40px}.hero-bottom{padding-top:24px}.hero-edge{display:none}.hero-object{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;width:clamp(220px,28vw,280px);margin:32px auto 0}}
+
+/* Phones / tablets: open the prototype full screen. */
+.demo-expand{display:none}
+.demo-close{display:none}
+@media(max-width:1100px){
+.demo-expand{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:14px 20px;border:1px solid #31566c;border-radius:999px;background:#152027;color:#f1faff;font-size:var(--t-btn-m-size);line-height:var(--t-btn-m-line);font-weight:700;cursor:pointer}
+}
+.demo-window.is-full{position:fixed;inset:0;z-index:2147483002;width:100vw;height:100dvh;max-height:none;min-height:0;aspect-ratio:auto;border:0}
+.demo-window:fullscreen{width:100vw;height:100vh;max-height:none;aspect-ratio:auto}
+.demo-window.is-full .demo-close,.demo-window:fullscreen .demo-close{display:grid;place-items:center;position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:2;width:44px;height:44px;border:1px solid #ffffff40;border-radius:50%;background:#0a0d12cc;color:#fff;font-size:18px;cursor:pointer}
+body.demo-locked{overflow:hidden}
+/* Phones: 30px transparent strips over the prototype edges, so a vertical swipe there scrolls
+   the page instead of being captured by the prototype. Off in full screen. */
+@media(max-width:760px){.demo-window{position:relative}.demo-window::before,.demo-window::after{content:"";position:absolute;top:0;bottom:0;z-index:1;width:30px;touch-action:pan-y}.demo-window::before{left:0}.demo-window::after{right:0}.demo-window.is-full::before,.demo-window.is-full::after,.demo-window:fullscreen::before,.demo-window:fullscreen::after{display:none}}
+
+/* Portfolio faces: Inter + Noto Sans TC everywhere; section labels (01 / LIVE PROTOTYPE …)
+   in JetBrains Mono like the homepage labels. */
+body,button,input{font-family:var(--font-sans)}
+.section-no{font-family:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;font-weight:500}
+
+/* Outlined title: the variable Inter draws its overlapping contours when stroked (stray lines
+   inside M, A, N). Use a static Inter Bold for the outline only. */
+@font-face{font-family:"Inter Outline";src:url(/shared/fonts/5ea15142f399fe20.woff2) format("woff2");font-weight:700;font-display:swap}
+.hero h1 em{font-family:"Inter Outline","Inter",sans-serif;font-weight:700;letter-spacing:-.055em}
+/* Hero eyebrow in JetBrains Mono, like the homepage labels. */
+.eyebrow{font-family:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;font-weight:500}
+/* Both title lines share one, slightly open tracking. */
+.hero h1,.hero h1 em{letter-spacing:-.05em}
+/* Inter kerns L-A tightly; give that one pair a little air in the outlined title. */
+.hero h1 .kern-la{margin-right:.05em}
+/* Desktop: 90px side margins. */
+@media(min-width:0px){.wrap{width:min(1400px,calc(100% - 2 * var(--gutter)))}.header{padding:0 var(--gutter)}}
+@media(min-width:0px){.header{padding:0 max(var(--gutter),calc((100% - 1400px)/2))}}
+
+/* The hero object can be moved independently of the embedded prototype. */
+.hero-zh{max-width:760px}
+.hero-object{pointer-events:auto;cursor:grab;touch-action:none;user-select:none;translate:var(--drag-x,0px) var(--drag-y,0px);z-index:2}
+.hero-object.is-dragging{cursor:grabbing}
+.hero-object img{pointer-events:none}
+.hero-object.is-dragging img{animation-play-state:paused}
+@media(max-width:1100px){.hero-object{margin-top:52px}}
+
+.spec-panel>h3:first-child{margin-top:0}
+
+#spec-title{color:#ffffff}
+
+/* Crop the top 9% of the live demo while preserving the original viewport below it. */
+.demo-window{position:relative}
+.demo-window iframe{position:absolute;left:0;top:-9.89011%;width:100%;height:109.89011%;transform:none}
+@media(min-width:761px){.demo-window{aspect-ratio:2000/991.9;min-height:336.7px}}
+@media(max-width:760px){.demo-window{aspect-ratio:1.15/.91;min-height:254.8px}}
+.demo-window.is-full,.demo-window:fullscreen{aspect-ratio:auto;min-height:0}
+
+/* Unify pass 2: section spacing 88 / compact 56 (phone 56 / 40) and section titles on the h2 role. */
+main section#prototype,main section#context,main section#spec{padding-top:88px!important;padding-bottom:88px!important}
+main section#prototype h2,main section#context h2,main section#spec h2{font-size:var(--t-h2-size)!important;line-height:var(--t-h2-line)!important;letter-spacing:var(--t-h2-tracking)!important}
+@media(max-width:760px){main section#prototype,main section#context,main section#spec{padding-top:56px!important;padding-bottom:56px!important}}
+main section#context{padding-top:56px!important;padding-bottom:56px!important}main section#context h2{font-size:var(--t-h3-size)!important;line-height:var(--t-h3-line)!important}@media(max-width:760px){main section#context{padding-top:40px!important;padding-bottom:40px!important}}
+
+/* Live prototype heading stacks below 1300px so the two-line title never wraps to three. */
+@media(max-width:1300px){#prototype .demo-heading{display:block}#prototype .demo-heading>p{max-width:none;margin-top:24px}}
+/* Tablet widths use the phone spec treatment: 360px-tall image and the tighter panel padding. */
+@media(min-width:761px) and (max-width:1100px){.spec-image-button img{height:360px;max-height:none}.spec-panel{padding:24px 22px 22px}}
+
+/* Enlarged UX specs open at 200%. */
+#image-dialog .dialog-scroll img{width:200%}
+/* Phone KV: eyebrow stays on one line. */
+@media(max-width:760px){.hero .eyebrow{white-space:nowrap;letter-spacing:.06em;gap:8px;font-size:min(12px,2.7vw)}.hero .eyebrow-line{width:16px;flex:0 0 16px}}
+
+/* Tablet: section titles stack above their intro so authored line breaks hold. */
+@media(min-width:761px) and (max-width:1299px){.context-layout{grid-template-columns:minmax(0,1fr)!important}}
+@media(max-width:760px){.hero-bottom .round-link{display:none}}
+/* Desktop and tablet: the spec opens at fit width; 200% stays for phone. */
+@media(min-width:761px){#image-dialog .dialog-scroll img{width:100%}}

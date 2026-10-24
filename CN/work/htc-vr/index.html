@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <base href="/work/htc-vr/">
+  <script src="/shared/locale-route.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c12">
+  <meta name="description" content="HTC VIVE VR 3D Object Manipulation 互動設計作品集。探索 3D 物件操作原型與 UX 規格。">
+  <title>VR 3D Object Manipulation｜Kevin Chang</title>
+  <link rel="stylesheet" href="/shared/fonts/google-855192fa17b8.css">
+  <link rel="stylesheet" href="../../shared/type.css">
+  <link rel="stylesheet" href="styles.css?v=1792853708">
+  <script src="script.js?v=1792853708" defer></script>
+  <script src="../../shared/transition.js?v=lite1"></script>
+  <link rel="stylesheet" href="../../shared/case-shell.css?v=clip1">
+  <script src="../../shared/projects.js?v=1791949592" defer></script>
+  <script src="../../shared/case-shell.js?v=1792900102" defer data-slug="htc-vr"></script>
+  <link rel="stylesheet" href="../../shared/kv-figma-20261024.css?v=20261024-3">
+  <link rel="stylesheet" href="../../shared/language.css?v=2">
+  <script src="../../shared/vendor/opencc-t2cn.js" defer></script>
+  <script src="../../shared/english.js?v=1" defer></script>
+  <script src="../../shared/language.js?v=2" defer></script>
+  <link rel="stylesheet" href="../../shared/image-viewer.css?v=2">
+  <script src="../../shared/image-viewer.js?v=4" defer></script>
+<link rel="stylesheet" href="../../shared/kv-eyebrow.css?v=1">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至內容</a>
+  <header class="header" id="top">
+    <a class="brand" href="#top" aria-label="返回頁首"><span class="brand-mark" aria-hidden="true">K<span>·</span>C</span><span>KEVIN CHANG<small>PORTFOLIO / VR EXPERIENCE</small></span></a>
+    <nav aria-label="頁面導覽"><a href="#prototype">互動展示</a><a href="#context">使用情境</a><a href="#spec">UX Spec</a></nav>
+    <span class="header-project">HTC VIVE <i aria-hidden="true">↗</i></span>
+  </header>
+
+  <main id="main">
+    <section class="hero kv-htc-vr" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="eyebrow kc-kv-eyebrow"><span class="kc-kv-dot" aria-hidden="true"></span><span>UX CASE STUDY</span><span class="kc-kv-rule" aria-hidden="true"> - </span><span class="kc-kv-topic">HTC VR INTERACTION</span></div>
+        <h1 id="hero-title">3D OBJECT<br><em>MANIPU<span class="kern-la">L</span>ATION</em></h1>
+        <div class="hero-bottom"><div><p class="hero-zh">從企業用戶操作情境出發，<br>為 VR 定義一致 3D 物件操作規範。</p></div><a class="round-link" href="#prototype" aria-label="往下查看互動展示">↓</a></div>
+        <div class="hero-object" tabindex="0" role="button" aria-label="拖曳 3D 物件；也可用方向鍵移動，Home 鍵復位"><img src="assets/3d-manipulation-move.png" alt="帶有三軸移動控制的 3D 物件" width="668" height="668" draggable="false"></div>
+
+      </div>
+    </section>
+
+    <section class="demo-section" id="prototype" aria-labelledby="prototype-title">
+      <div class="wrap">
+        <div class="section-heading demo-heading"><div><span class="section-no">01 / LIVE PROTOTYPE</span><h2 id="prototype-title">動手試試，<br><em>在 VR 中操作 3D 物件。</em></h2></div><p>透過模式切換兼顧易用與精準：日常操作保持直覺，專業需求則能切換至 Gizmo，精確控制位置、角度與尺寸。</p></div>
+        <div class="demo-shell"><div class="demo-window"><iframe id="prototype-frame" src="demo/" title="HTC VR 3D 物件操作互動原型" allow="fullscreen" loading="eager"></iframe><button class="demo-close" type="button" aria-label="結束全螢幕" hidden>✕</button></div></div><button class="demo-expand" type="button">全螢幕操作</button>
+      </div>
+    </section>
+
+    <section class="context-section" id="context" aria-labelledby="context-title"><div class="wrap context-layout"><div class="context-intro"><span class="section-no">02 / TWO USERS, ONE SYSTEM</span><h2 id="context-title">同一套互動系統，<br>滿足一般/專家需求。</h2></div><div class="context-cards"><article><span class="context-index">EDUCATION</span><h3>一般教育用戶</h3><p>在虛擬空間中展示、拿取與調整 3D 教材。以直接選取和基礎操作降低學習門檻，讓注意力留在教學內容。</p><a class="context-mode" href="#spec" data-mode="basic"><span aria-hidden="true">⟶</span>普通模式</a></article><article><span class="context-index">ARCHITECTURE</span><h3>專業建築用戶</h3><p>在空間方案中配置大量模型。透過 Gizmo 的軸向移動、旋轉與縮放，以及複製、鎖定等管理操作，支援較精確的編排。</p><a class="context-mode" href="#spec" data-mode="gizmo"><span aria-hidden="true">⟶</span>Gizmo 進階模式</a></article></div></div></section>
+
+    <section class="spec-section" id="spec" aria-labelledby="spec-title"><div class="wrap"><div class="spec-top"><span class="section-no">03 / UX SPECIFICATION</span><div><h2 id="spec-title">核心UX規格</h2></div></div>
+      <div class="spec-explorer"><div class="spec-sidebar"><div class="spec-group"><h3>01 <span>重點核心功能</span></h3><div class="spec-tabs" id="core-tabs" role="tablist" aria-label="重點核心功能"></div></div><div class="spec-group"><h3>02 <span>邊界狀態</span></h3><div class="spec-tabs" id="edge-tabs" role="tablist" aria-label="邊界狀態"></div></div></div><div class="spec-panel" id="spec-panel" role="tabpanel"></div></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div><span>KEVIN CHANG / UX PORTFOLIO</span><strong>3D OBJECT<br>MANIPULATION</strong></div><a href="#top">BACK TO TOP ↑</a></div></footer>
+  <dialog id="image-dialog" aria-label="放大查看 UX Spec 圖片"><div class="dialog-bar"><span id="dialog-caption"></span><button type="button" id="dialog-close" aria-label="關閉圖片">✕</button></div><div class="dialog-scroll"><img id="dialog-image" alt=""></div></dialog>
+</body>
+</html>

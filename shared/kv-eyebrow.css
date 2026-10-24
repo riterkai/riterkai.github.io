@@ -1,0 +1,17 @@
+/* Consistent case-study KV signature. Only the dot carries the project accent. */
+body main .kc-kv-eyebrow{display:flex!important;align-items:center;flex-wrap:wrap;gap:12px!important;max-width:100%;height:auto!important;min-height:18px;margin-bottom:0;font:500 12px/1.5 "JetBrains Mono",ui-monospace,monospace!important;letter-spacing:.16em!important;text-transform:uppercase;white-space:normal!important}
+body main .kc-kv-eyebrow>span{font:inherit;letter-spacing:inherit;color:inherit}
+body main .kc-kv-eyebrow .kc-kv-dot{display:block;flex:0 0 7px;width:7px;height:7px;border:0;border-radius:50%;background:var(--kc-accent,#8ccfff)!important;box-shadow:0 0 16px color-mix(in srgb,var(--kc-accent,#8ccfff) 60%,transparent);animation:none}
+body main .kc-kv-eyebrow .kc-kv-rule{display:block;flex:0 0 36px;width:36px;height:1px;background:currentColor;opacity:.45;font-size:0!important;line-height:0}
+body main .kc-kv-eyebrow .kc-kv-topic{min-width:0}
+@media(max-width:760px){body main .kc-kv-eyebrow{column-gap:8px!important;row-gap:6px!important;font-size:10px!important;letter-spacing:.1em!important}body main .kc-kv-eyebrow .kc-kv-rule{flex-basis:18px;width:18px}body main .kc-kv-eyebrow .kc-kv-topic{flex:1 1 140px}}
+body main .kc-kv-eyebrow{color:inherit!important}
+/* The entire signature, including its text and divider, uses the project accent. */
+body main .kc-kv-eyebrow{color:var(--kc-accent,#8ccfff)!important}
+body main .kc-kv-eyebrow .kc-kv-topic{display:block!important;color:inherit!important;margin-left:0!important}
+/* Mach-E uses the same cyan as its DIGITAL PLATFORM AND PRODUCT section label. */
+body main .kv-mach-e .kc-kv-eyebrow{--kc-accent:#66d8ee}
+/* Same ripple geometry and timing as the homepage .pulse::after. */
+body main .kc-kv-eyebrow .kc-kv-dot{position:relative}
+body main .kc-kv-eyebrow .kc-kv-dot::after{content:"";position:absolute;inset:-5px;border:1px solid var(--kc-accent,#8ccfff);border-radius:50%;animation:kc-kv-pulse 2.4s ease-out infinite}
+@keyframes kc-kv-pulse{from{transform:scale(.4);opacity:1}to{transform:scale(1.6);opacity:0}}

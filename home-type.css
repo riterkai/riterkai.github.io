@@ -1,0 +1,53 @@
+/* Homepage on the shared type scale (shared/type.css) + Figma 232:50858 greys (#dcdcdc).
+   Families stay as they are (Inter / Noto Sans TC, JetBrains Mono for labels); only size,
+   leading and weight come from the roles. */
+.topbar nav { font-size: var(--t-small-size); line-height: var(--t-small-line); color: #dcdcdc; }
+.kv-eyebrow, .section-label, .card-no, .card-flag, .card-meta, .footer { font-size: var(--t-tag-size); line-height: var(--t-tag-line); }
+.kv h1 { font-size: var(--t-h1-size); line-height: var(--t-h1-line); font-weight: var(--t-h1-weight); }
+.kv-desc { font-size: var(--t-body-size); line-height: var(--t-body-line); color: #dcdcdc; }
+.button { font-size: var(--t-btn-m-size); line-height: var(--t-btn-m-line); font-weight: var(--t-btn-m-weight); }
+.text-link { font-size: var(--t-btn-m-size); line-height: var(--t-btn-m-line); color: #dcdcdc; }
+.work-head h2 { font-size: var(--t-h4-size); line-height: var(--t-h4-line); font-weight: var(--t-h4-weight); }
+.chip { font-size: var(--t-small-size); line-height: 1; }
+.chip:not([aria-pressed="true"]) { color: #dcdcdc; }
+.card h3 { font-size: var(--t-h6-size); line-height: var(--t-h6-line); font-weight: var(--t-h6-weight); }
+.card p { font-size: var(--t-small-size); line-height: var(--t-small-line); color: #dcdcdc; }
+.card-tags span { font-size: var(--t-tag-size); line-height: var(--t-tag-line); }
+/* Two-column hero (>900px): the copy column is only about half the viewport, so the title
+   follows the viewport (4.6vw) until it reaches the 大標題 size — no break inside a phrase. */
+@media (min-width: 901px) { .kv h1 { font-size: min(var(--t-h1-size), 4.6vw); line-height: 1.2; } }
+/* Phones: two card columns, so card titles step down to 16px to avoid 3-line titles. */
+@media (max-width: 560px) { .card h3 { font-size: 16px; line-height: 24px; } }
+/* Desktop: wider side margins (90px) so lines do not start right at the screen edge. */
+@media (min-width: 1200px) { .topbar, .kv, .work, .footer { padding-left: 90px; padding-right: 90px; } }
+/* Content column matches the case pages (HTC VR 1400px): 90px gutters, capped at 1400px wide. */
+@media (min-width: 1200px) {
+  .kv, .work, .footer { max-width: 1580px; }
+  .topbar { padding-left: max(90px, calc((100% - 1400px) / 2)); padding-right: max(90px, calc((100% - 1400px) / 2)); }
+}
+/* Filter labels use pure white in every unselected state. */
+.chip:not([aria-pressed="true"]){color:#ffffff}
+/* Card corner labels (number / category): 10px on every width. */
+.card-no, .card-flag { font-size: 10px !important; line-height: 14px !important; }
+/* Phones: filter tabs stay on one line and scroll sideways (edge to edge, no scrollbar). */
+@media (max-width: 760px) {
+  .filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; margin-inline: -20px; padding-inline: 20px; scroll-padding-inline: 20px; }
+  .filters::-webkit-scrollbar { display: none; }
+  .filters > * { flex: none; white-space: nowrap; }
+}
+/* Phones: SELECTED WORK → 作品 → filter tabs at the same 12px spacing. */
+@media (max-width: 760px) { #work .section-label { margin-bottom: 12px !important; } #work .work-head { gap: 12px !important; } }
+@media (max-width: 760px) { #work { margin-top: 40px; } }
+/* 瀏覽作品 lands with SELECTED WORK right at the top of the screen (the header slides away on scroll down). */
+.work { scroll-margin-top: 8px !important; }
+/* Card titles: shorter form on phones (Mach-E, beanfun). */
+@media (max-width: 560px) {
+  /* Phones: full description, no 2-line clamp; each row is as tall as its tallest card. */
+  .card p { display: block !important; -webkit-line-clamp: unset !important; overflow: visible !important; }
+  .grid { align-items: stretch; }
+}
+
+/* Full card descriptions on every width; each row takes the height of its tallest card. */
+.card p { display: block !important; -webkit-line-clamp: unset !important; overflow: visible !important; }
+/* Header mark: keep the outer ring and glow, with an empty center. */
+.topbar .logo-mark{box-shadow:0 0 18px rgb(140 207 255 / .35)}

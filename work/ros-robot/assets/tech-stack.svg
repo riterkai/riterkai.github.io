@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="770" viewBox="0 0 1000 770" role="img" aria-labelledby="title desc">
+<title id="title">ROS 數據可視化平台技術框架</title><desc id="desc">實驗影片與 CSV 經由本地 Flask server 提供給瀏覽器；HTML5 video 與 JavaScript Canvas 共用時間軸，同步播放並支援點擊圖表跳轉。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#1d5fc4" stroke-width="1.6"/></marker></defs>
+<rect width="1000" height="770" rx="20" fill="#fff"/>
+<g font-family="Arial, 'Noto Sans TC', sans-serif" fill="#18263b">
+<text x="48" y="58" fill="#1d5fc4" font-size="18" letter-spacing="3">LOCAL WEB ARCHITECTURE</text>
+<text x="48" y="104" font-size="30" font-weight="700">影片與數據，共用同一條時間軸</text>
+<g fill="#f6f8fc" stroke="#dce3ee" stroke-width="2"><rect x="48" y="144" width="438" height="110" rx="12"/><rect x="514" y="144" width="438" height="110" rx="12"/></g>
+<text x="72" y="182" font-size="23" font-weight="700">實驗錄影</text><text x="72" y="219" font-size="21" fill="#51627b">webcam.mp4 · aruco.mp4</text>
+<text x="538" y="182" font-size="23" font-weight="700">機器人數據</text><text x="538" y="219" font-size="21" fill="#51627b">log.csv · pose.csv</text>
+<g fill="none" stroke="#1d5fc4" stroke-width="2" marker-end="url(#arrow)"><path d="M267 254V298"/><path d="M733 254V298"/></g>
+<rect x="48" y="304" width="904" height="100" rx="12" fill="#edf4ff" stroke="#b9c8dd" stroke-width="2"/>
+<text x="72" y="344" font-size="25" font-weight="700" fill="#1d5fc4">Python Flask · 本地 Server</text><text x="72" y="378" font-size="21" fill="#51627b">提供網頁與 static/ 內的影片、CSV 檔案</text>
+<path d="M500 404V447" fill="none" stroke="#1d5fc4" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="48" y="454" width="904" height="266" rx="12" fill="#fff" stroke="#b9c8dd" stroke-width="2"/>
+<text x="72" y="493" font-size="24" font-weight="700">瀏覽器 · HTML + JavaScript</text>
+<g fill="#f6f8fc" stroke="#dce3ee"><rect x="72" y="520" width="395" height="94" rx="8"/><rect x="533" y="520" width="395" height="94" rx="8"/></g>
+<text x="94" y="555" font-size="22" font-weight="700">HTML5 video</text><text x="94" y="589" font-size="20" fill="#51627b">Webcam 與 ArUco 雙影片</text>
+<text x="555" y="555" font-size="22" font-weight="700">JavaScript · Canvas</text><text x="555" y="589" font-size="20" fill="#51627b">CSV 解析與數據圖表</text>
+<path d="M467 567H530" fill="none" stroke="#1d5fc4" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="72" y="636" width="856" height="56" rx="8" fill="#edf4ff"/>
+<text x="500" y="672" text-anchor="middle" font-size="21" fill="#1d5fc4">共用時間軸 · currentTime 同步播放 / seek 跳轉</text>
+</g></svg>

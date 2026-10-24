@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <script src="/shared/locale-route.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>字級規範｜Kevin Chang</title>
+  <link rel="stylesheet" href="/shared/fonts/google-06040dd8ccf5.css">
+  <link rel="stylesheet" href="../shared/type.css">
+  <style>
+    :root { --bg: #070a12; --panel: #0d1320; --text: #e9eef4; --muted: #8b97a6; --dim: #5b6674; --line: rgb(255 255 255 / 0.08); --accent: #8ccfff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+    .wrap { width: min(1280px, 100% - 32px); margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    header a { color: var(--muted); text-decoration: none; }
+    header a:hover { color: var(--text); }
+    .meta { font: 400 12px/1.4 "JetBrains Mono", monospace; color: var(--dim); }
+    .now { color: var(--accent); }
+    h1.page { margin: 56px 0 8px; }
+    .intro { color: var(--muted); max-width: 640px; margin: 0 0 48px; }
+
+    /* scale rows */
+    .row { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); align-items: start; }
+    .label b { display: block; font: 600 15px/1.4 var(--font-sans); }
+    .label .meta { display: block; margin-top: 6px; }
+    .sample { margin: 0; overflow-wrap: anywhere; background: linear-gradient(transparent calc(100% - 1px), rgb(140 207 255 / 0.12) 0) 0 0 / 100% var(--lh, 1em); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgb(255 255 255 / 0.2); border-radius: 999px; color: var(--text); background: transparent; }
+    .btn.t-btn-m { padding: 12px 22px; }
+    .btn.t-btn-s { padding: 8px 14px; }
+    .tag { color: var(--accent); }
+
+    /* composed example */
+    .example { margin: 72px 0 96px; padding: clamp(24px, 5vw, 72px); border-radius: 16px; background: radial-gradient(60% 80% at 75% 40%, rgb(30 90 140 / 0.35), transparent 70%), var(--panel); border: 1px solid var(--line); }
+    .example .tag { display: flex; align-items: center; gap: 12px; color: var(--text); }
+    .example .tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    .outline { color: transparent; -webkit-text-stroke: 1.5px #d7e3ef; }
+    .example .t-display-xl { margin: 40px 0 32px; }
+    .example .t-h4 { margin: 0 0 20px; }
+    .example .t-body { color: var(--muted); max-width: 560px; margin: 0 0 32px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; }
+    .card { padding: 24px; border: 1px solid var(--line); border-radius: 14px; }
+    .card .t-h5 { margin: 10px 0 8px; }
+    .card .t-small { color: var(--muted); margin: 0; }
+    .tabs { display: flex; gap: 24px; margin-top: 48px; border-bottom: 1px solid var(--line); }
+    .tabs span { padding-bottom: 12px; color: var(--muted); }
+    .tabs span:first-child { color: var(--text); box-shadow: inset 0 -2px var(--accent); }
+    @media (max-width: 760px) {
+      .row { grid-template-columns: 1fr; gap: 12px; }
+      .cards { grid-template-columns: 1fr; }
+      .example { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="../" class="t-small">← 作品集首頁</a>
+      <span class="meta">目前視窗寬 <span class="now" id="vw"></span>px</span>
+    </header>
+
+    <h1 class="page t-h1">字級規範</h1>
+    <p class="intro t-body">全站共用 13 個文字角色，定義在 <code>shared/type.css</code>。1024px 以上為桌機值，往下平滑縮小到手機（390px）的值。每列右邊的淡藍底線標出行高；拖動視窗寬度可以看縮放，數字會即時更新。</p>
+
+    <section id="scale"></section>
+
+    <section class="example" aria-label="組合範例">
+      <p class="meta" style="margin:0 0 24px">組合範例：HTC VR 案例首屏</p>
+      <div class="t-tag">UX Case Study — HTC Vive / VR Interaction</div>
+      <div class="t-display-xl">3D OBJECT<br><span class="outline">MANIPULATION</span></div>
+      <p class="t-h4">讓虛擬空間中的物件，<br>像真實世界一樣直覺操作。</p>
+      <p class="t-body">為 VR 世界定義選取、移動、旋轉與縮放的操作規範，並做成可直接試玩的互動原型。</p>
+      <button class="btn t-btn-m" type="button">親手試試 ↓</button>
+      <button class="btn t-btn-s" type="button" style="margin-left:12px">UX Spec</button>
+
+      <div class="tabs t-small"><span>互動展示</span><span>使用情境</span><span>UX Spec</span></div>
+
+      <p class="t-h2" style="margin:56px 0 0">01 · 使用情境</p>
+      <p class="t-h3" style="margin:12px 0 0">從選取到放下，一個完整的操作循環</p>
+      <div class="cards">
+        <div class="card"><span class="t-tag tag">Select</span><p class="t-h5">選取物件</p><p class="t-small">手把射線指向物件，扳機確認選取。</p></div>
+        <div class="card"><span class="t-tag tag">Move</span><p class="t-h5">移動與旋轉</p><p class="t-small">拖曳軸向控制點，限制單一方向移動。</p></div>
+        <div class="card"><span class="t-tag tag">Scale</span><p class="t-h5">等比縮放</p><p class="t-small">雙手拉開或靠近，保持物件比例。</p></div>
+      </div>
+      <p class="t-h6" style="margin:40px 0 8px">設計原則</p>
+      <p class="t-body" style="margin:0">操作回饋即時可見，任何步驟都能取消。</p>
+    </section>
+  </div>
+
+  <script>
+    const roles = [
+      ["display-xl", "超大標題 1", "100 / 96", "40 / 38", "3D OBJECT 設計"],
+      ["display-l", "超大標題 2", "75 / 80", "36 / 42", "MACH-E 購車體驗"],
+      ["h1", "大標題", "58 / 70", "32 / 42", "在技術與設計之間"],
+      ["h2", "中標題", "50 / 66", "28 / 38", "打造能被實現的體驗"],
+      ["h3", "小標題", "40 / 52", "24 / 34", "從選取到放下的操作循環"],
+      ["h4", "超小標題 1", "28 / 40", "22 / 32", "讓虛擬空間中的物件，像真實世界一樣直覺操作。"],
+      ["h5", "超小標題 2", "24 / 28", "20 / 26", "Mustang Mach-E 購車體驗設計"],
+      ["h6", "超小標題 3", "18 / 28", "18 / 28", "設計原則 Design Principles"],
+      ["body", "一般描述", "16 / 28", "16 / 28", "整合官網、微信小程序與 EV App，從 0 到 1 設計預訂、購車到交車的完整旅程。每個步驟都經過使用者訪談與易用性測試，再把回饋歸納成後續設計方向。"],
+      ["small", "小描述 / tab", "14 / 24", "14 / 24", "互動展示　使用情境　UX Spec — 圖片說明與次要資訊"],
+      ["tag", "裝飾字 / tag", "12 / 14", "12 / 14", "UX Case Study · HTC Vive"],
+      ["btn-m", "中按鈕字", "14 / 20", "14 / 20", "親手試試 ↓"],
+      ["btn-s", "小按鈕", "12 / 18", "12 / 18", "UX Spec"],
+    ]
+    const scale = document.getElementById("scale")
+    for (const [key, name, desk, phone, text] of roles) {
+      const row = document.createElement("div")
+      row.className = "row"
+      const isBtn = key.startsWith("btn")
+      row.innerHTML = `
+        <div class="label"><b>${name}</b>
+          <span class="meta">.t-${key}</span>
+          <span class="meta">桌機 ${desk}　手機 ${phone}</span>
+          <span class="meta">目前 <span class="now" data-now></span></span></div>
+        ${isBtn ? `<div><button class="btn t-${key}" type="button">${text}</button></div>` : `<p class="sample t-${key}">${text}</p>`}`
+      scale.appendChild(row)
+    }
+    function update() {
+      document.getElementById("vw").textContent = innerWidth
+      document.querySelectorAll(".row").forEach((row) => {
+        const el = row.querySelector(".sample, .btn")
+        const cs = getComputedStyle(el)
+        row.querySelector("[data-now]").textContent = `${Math.round(parseFloat(cs.fontSize))} / ${Math.round(parseFloat(cs.lineHeight))}`
+        el.style.setProperty("--lh", cs.lineHeight)
+      })
+    }
+    addEventListener("resize", update)
+    document.fonts.ready.then(update)
+    update()
+  </script>
+</body>
+</html>

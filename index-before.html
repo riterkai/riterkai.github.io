@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070a10">
+  <title>[Before] Kevin Chang｜Product Designer</title>
+  <meta name="description" content="Kevin Chang（張淳凱）作品集：結合工程背景與產品設計，橫跨 VR／AR、AI 硬體、汽車與電商。">
+  <link rel="stylesheet" href="/shared/fonts/google-8da57c1b6ec2.css">
+  <link rel="stylesheet" href="portal.css?v=1791875924096464000">
+  <link rel="stylesheet" href="hero/hero.css?v=1791876708146353000">
+  <script src="shared/transition.js?v=1791951012"></script>
+  <!-- Hold the first paint until the cards exist (see the scripts at the end of <body>), so a
+       return from a case can restore the reading spot before anything is shown. -->
+  <link rel="expect" href="#kc-cards-ready" blocking="render">
+  <script src="hero/hero.js?v=4" defer></script>
+  <script src="shared/compare.js" data-before="index-before.html" data-after="./" data-current="before"></script>
+</head>
+<body>
+  <a class="skip-link" href="#work">跳至作品</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true"><div class="bg-stars"></div><div class="bg-planet"></div>
+    <div class="bubbles"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+    <div class="twinkle"><i style="--x:12%;--y:22%;--d:0s"></i><i style="--x:24%;--y:70%;--d:1.2s"></i><i style="--x:38%;--y:14%;--d:2.1s"></i><i style="--x:57%;--y:82%;--d:.6s"></i><i style="--x:66%;--y:30%;--d:1.8s"></i><i style="--x:81%;--y:58%;--d:2.7s"></i><i style="--x:90%;--y:18%;--d:.9s"></i><i style="--x:47%;--y:46%;--d:3.2s"></i></div>
+  </div>
+
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="Kevin Chang 首頁"><span class="logo-mark" aria-hidden="true"></span><span>KEVIN CHANG</span></a>
+    <nav aria-label="主要導覽"><a href="#work">作品</a><a href="profile/">關於</a><a href="mailto:riterkai@hotmail.com">聯絡</a><a href="type/" class="nav-type">字級</a></nav>
+  </header>
+
+
+  <main id="top">
+    <section class="kv" aria-labelledby="kv-title">
+      <div class="kv-copy">
+        <p class="kv-eyebrow"><span class="pulse" aria-hidden="true"></span>PRODUCT DESIGNER · ENGINEER · AI-NATIVE</p>
+        <h1 id="kv-title">在技術與設計之間，<br><em>打造能被實現的體驗。</em></h1>
+        <p class="kv-desc">我是 Kevin Chang（張淳凱），擁有工程背景的產品設計師。9 年橫跨 VR／AR、AI 硬體、汽車與電商，習慣從技術限制出發定義體驗，並親手做出可驗證的原型。</p>
+        <div class="kv-actions">
+          <a class="button" href="#work">瀏覽作品 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="profile/">了解更多</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sphere"><span class="sphere-tint"></span><span class="sphere-sheen"></span></div>
+        <div class="character"><span class="character-shadow"></span><img src="hero/character.webp" alt="" width="900" height="1124"></div>
+        <p class="hero-note"><span>the guy who designs<br>&amp; engineers</span><svg viewBox="0 0 90 60" aria-hidden="true"><path d="M86 6 C 60 4, 30 14, 14 46"/><path d="M8 34 L14 47 L26 40"/></svg></p>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="work-head">
+        <div>
+          <p class="section-label">SELECTED WORK · <span id="work-count">09</span></p>
+          <h2 id="work-title">作品</h2>
+        </div>
+        <div class="filters" role="toolbar" aria-label="依類別篩選" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Kevin Chang · 張淳凱</span>
+    <a href="mailto:riterkai@hotmail.com">riterkai@hotmail.com</a>
+  </footer>
+  <!-- Cards are built synchronously here, before the first paint. -->
+  <script src="shared/projects.js?v=1791949592"></script>
+  <script src="portal.js?v=1791949592"></script>
+  <div id="kc-cards-ready" hidden></div>
+</body>
+</html>

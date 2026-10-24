@@ -1,0 +1,143 @@
+/* Unified first screen (KV) for the case pages — loaded by each After page only, so the Before
+   copies keep their own KV for comparison. Pages mark their KV parts with data attributes:
+   data-kv (section) · data-kv-grid · data-kv-copy · data-kv-eyebrow · h1 · data-kv-sub ·
+   data-kv-lead · data-kv-cta · data-kv-art (picture) · data-kv-photo (full-bleed photo, Mach-E).
+   Reference pages: Mach-E, AI Glasses, Beanfun. */
+
+:root {
+  --kv-head: 66px;                              /* case header height */
+  --kv-top: clamp(64px, 11vh, 120px);           /* header → eyebrow */
+  --kv-bottom: clamp(72px, 11vh, 128px);        /* end of the KV → next section */
+  --kv-gap: 64px;                               /* text column ↔ picture */
+}
+/* Headers that overlay the hero (were fixed): the hero starts under them, so add their height. */
+body:has(header.kc-header--overlay) [data-kv] { --kv-pad-head: var(--kv-head); }
+
+[data-kv]:not(:has([data-kv-photo])) {
+  min-height: 0 !important;
+  height: auto !important;
+}
+[data-kv]:not(:has([data-kv-photo])) {
+  display: block !important;
+  padding: calc(var(--kv-pad-head, 0px) + var(--kv-top)) 0 var(--kv-bottom) !important;
+}
+
+/* Inner wrappers must not add their own spacing around the KV. */
+[data-kv] > .wrap, [data-kv] .hero-inner { padding-top: 0 !important; padding-bottom: 0 !important; min-height: 0 !important; }
+
+/* Two equal columns inside the content column; the picture is centred on the text block. */
+[data-kv] [data-kv-grid] {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: var(--kv-gap) !important;
+  align-items: center !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+}
+[data-kv] [data-kv-copy] {
+  align-self: start !important;                /* text always starts at the same height */
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 600px;
+  min-height: 0 !important;
+  transform: none !important;
+  display: block !important;
+}
+[data-kv] [data-kv-art] {
+  margin: 0 !important;
+  justify-self: end;
+  align-self: center !important;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Text rhythm: eyebrow → 32 → title → 20 → subtitle → 20 → description → 36 → button. */
+[data-kv] [data-kv-eyebrow] {
+  margin: 0 0 32px !important;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace !important;
+  font-size: 12px !important;
+  line-height: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.18em !important;
+  position: static !important;
+}
+[data-kv] [data-kv-copy] h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Inter", "Noto Sans TC", "PingFang TC", system-ui, sans-serif !important;
+  font-size: clamp(40px, 4.9vw, 70px) !important;
+  line-height: 1.17 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+[data-kv] [data-kv-copy] h1 * { font-size: inherit !important; line-height: inherit !important; letter-spacing: inherit !important; margin-top: 0 !important; }
+[data-kv] [data-kv-sub] {
+  margin: 20px 0 0 !important;
+  font-size: var(--t-h4-size, 28px) !important;
+  line-height: var(--t-h4-line, 40px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+[data-kv] [data-kv-lead] {
+  margin: 20px 0 0 !important;
+  max-width: 480px !important;
+  font-size: var(--t-body-size, 16px) !important;
+  line-height: var(--t-body-line, 28px) !important;
+}
+[data-kv] [data-kv-cta] { margin: 36px 0 0 !important; }
+
+/* Mach-E: the photo and the KV's size stay exactly as the page has them (as in Before); only the
+   text is unified — it starts at the same height as the other pages and uses the same rhythm. */
+@media (min-width:761px) {
+  [data-kv] [data-kv-photo] ~ [data-kv-copy] {
+    width: min(1400px, calc(100% - 2 * var(--gutter))) !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: var(--kv-top) 50% 0 0 !important;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 760px) {
+  [data-kv] [data-kv-photo] ~ [data-kv-copy] { padding: var(--kv-top) 20px 0 !important; }
+}
+
+/* Tablet and phone: stacked — text first, then the picture, centred. */
+@media (max-width:760px) {
+  [data-kv] [data-kv-grid] { grid-template-columns: minmax(0, 1fr) !important; gap: 56px !important; }
+  [data-kv] [data-kv-copy] { max-width: 640px; }
+  [data-kv] [data-kv-art] { justify-self: center; max-width: 480px; }
+}
+@media (max-width: 760px) {
+  :root { --kv-top: 48px; --kv-bottom: 64px; }
+  [data-kv] [data-kv-sub] { font-size: 22px !important; line-height: 32px !important; }
+}
+
+/* One button style in every KV: a filled pill in the project's accent (set by case-shell.js). */
+[data-kv] a[data-kv-cta], [data-kv] button[data-kv-cta], [data-kv] [data-kv-cta] > a {
+  display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 10px !important;
+  width: auto !important; min-width: 0 !important; height: 46px !important; padding: 0 24px !important;
+  border: 0 !important; border-radius: 999px !important;
+  background: var(--kc-accent, #8ccfff) !important; color: var(--kc-accent-ink, #0a0d12) !important; /* light accent → black text, dark → white */
+  font-family: "Inter", "Noto Sans TC", "PingFang TC", system-ui, sans-serif !important;
+  font-size: 14px !important; line-height: 20px !important; font-weight: 600 !important; letter-spacing: 0.02em !important;
+  text-decoration: none !important; text-transform: none !important; box-shadow: none !important;
+  transition: filter 0.2s ease, transform 0.2s ease !important;
+}
+[data-kv] a[data-kv-cta]::before, [data-kv] a[data-kv-cta]::after, [data-kv] button[data-kv-cta]::after, [data-kv] [data-kv-cta] > a::after { content: none !important; }
+[data-kv] a[data-kv-cta]:hover, [data-kv] button[data-kv-cta]:hover, [data-kv] [data-kv-cta] > a:hover { filter: brightness(1.08); transform: translateY(-1px); }
+[data-kv] [data-kv-cta] span, [data-kv] [data-kv-cta] i { color: inherit !important; font-size: 16px !important; margin: 0 !important; }
+
+/* Beanfun keeps its original title size (58/70). */
+[data-kv][data-kv-title="58"] [data-kv-copy] h1 { font-size: clamp(40px, 4.1vw, 58px) !important; line-height: 1.2 !important; }
+
+/* Stacked (tablet / phone): tall phone mock-ups are scaled down so they don't dominate. */
+@media (max-width:760px) {
+  [data-kv] .hero-art:has(.screen), [data-kv] .hero-phones { zoom: 0.75; }
+}
+@media (max-width: 760px) {
+  [data-kv] .hero-art:has(.screen), [data-kv] .hero-phones { zoom: 0.62; }
+}

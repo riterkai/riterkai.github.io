@@ -1,0 +1,117 @@
+:root { --gutter: clamp(24px, calc(8vw - 6px), 90px); } /* side gutter: 24px@375 → 90px@1200 */
+/* Injected into every case page: the shared portfolio dock and the portal arrival/exit layers.
+   Everything is prefixed kc- so it never collides with the case page's own styles. */
+.kc-dock {
+  position: fixed; left: 20px; bottom: 20px; z-index: 2147483000;
+  display: flex; align-items: center; gap: 4px;
+  padding: 4px; /* + 1px border = Figma's 5px padding with an inside stroke: 128 × 42 */ border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  background: rgb(10 13 18 / 0.78);
+  -webkit-backdrop-filter: blur(28px); backdrop-filter: blur(28px);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.28);
+  color: #e9eef4;
+  font: 500 13px/1 "Inter", "PingFang TC", "Noto Sans TC", system-ui, sans-serif;
+  letter-spacing: 0;
+  animation: kc-dock-in 600ms 500ms cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+/* On light sections: a white glass dock with dark arrows; colours ease between the two tones. */
+.kc-dock { transition: background 300ms ease, border-color 300ms ease, color 300ms ease, box-shadow 300ms ease; }
+.kc-dock--light {
+  background: rgb(255 255 255 / 0.78);
+  border-color: rgb(15 23 42 / 0.1);
+  color: #1d2735;
+  box-shadow: 0 10px 30px rgb(24 38 59 / 0.12);
+}
+.kc-dock--light a:hover { background: rgb(15 23 42 / 0.06); }
+@keyframes kc-dock-in { from { opacity: 0; transform: translateY(16px); } }
+.kc-dock a {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 32px; border-radius: 999px;
+  color: inherit; text-decoration: none;
+  transition: background 160ms ease;
+}
+.kc-dock a:hover { background: rgb(255 255 255 / 0.1); }
+.kc-dock a:focus-visible { outline: 2px solid var(--kc-accent, #8ccfff); outline-offset: 2px; }
+/* ← ◯ → (Figma 267:45291): 36px arrows either side of the home ring. */
+.kc-dock-arrow { width: 36px; font-size: 16px; }
+.kc-dock-home { width: 38px; }
+/* Home = the portfolio's ring mark (same as the header logo), glowing in the project's colour. */
+.kc-dock-mark {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 1.5px solid var(--kc-accent, #8ccfff);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--kc-accent, #8ccfff) 70%, transparent), inset 0 0 4px color-mix(in srgb, var(--kc-accent, #8ccfff) 40%, transparent);
+  transition: box-shadow 200ms ease;
+}
+.kc-dock-home:hover .kc-dock-mark { box-shadow: 0 0 16px var(--kc-accent, #8ccfff), inset 0 0 6px color-mix(in srgb, var(--kc-accent, #8ccfff) 60%, transparent); }
+
+/* Header brand on every case page (Figma 271:45314): ring mark + two lines, colour from the header. */
+header .kc-brand { display: inline-flex !important; align-items: center; gap: 14px; color: inherit; text-decoration: none; white-space: nowrap; }
+header .kc-brand::before, header .kc-brand::after { content: none !important; }
+/* Pages style their own .brand children: neutralise that so the shared brand looks the same everywhere. */
+header .kc-brand span, header .kc-brand b, header .kc-brand small { margin: 0; padding: 0; border: 0; background: none; color: inherit; transform: none; }
+/* Same layout on every case header: brand left, page nav centred, project label right. */
+@media (min-width: 900px) {
+  header.kc-header { display: grid !important; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  header.kc-header > nav { justify-self: center; margin: 0; }
+  header.kc-header > :last-child:not(nav):not(.brand) { justify-self: end; }
+}
+header .kc-brand .kc-ring {
+  flex: none; width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--kc-accent, #8ccfff);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--kc-accent, #8ccfff) 65%, transparent), inset 0 0 5px color-mix(in srgb, var(--kc-accent, #8ccfff) 40%, transparent);
+}
+.kc-brand-text { display: flex; flex-direction: column; gap: 4px; font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace; text-transform: uppercase; }
+.kc-brand-text b { font-size: 12px; line-height: 1; font-weight: 700; letter-spacing: 0.16em; }
+.kc-brand-text small { font-size: 10px; line-height: 1; font-weight: 400; letter-spacing: 0.14em; opacity: 0.6; }
+
+/* Portal transitions (animated in shared/transition.js). */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+html[data-kc-nav="return"]::view-transition-old(root) { z-index: 2; }
+/* On white the glow reads as a smudge: a clean ring only, with a faint halo on hover. */
+.kc-dock--light .kc-dock-mark { box-shadow: none; }
+.kc-dock--light .kc-dock-home:hover .kc-dock-mark { box-shadow: 0 0 0 4px color-mix(in srgb, var(--kc-accent, #8ccfff) 18%, transparent); }
+header .kc-brand--light .kc-ring { box-shadow: none; }
+/* Page nav in every case header: 12px. */
+header.kc-header > nav, header.kc-header > nav a { font-size: 12px !important; }
+/* Same nav type on every case header (pages had their own weights, e.g. Beanfun 700). */
+header.kc-header > nav a { font-family: "Inter", "Noto Sans TC", "PingFang TC", system-ui, sans-serif !important; font-weight: 500 !important; letter-spacing: 0.02em !important; text-transform: none !important; }
+/* …and the same tone: header text colour at 75%, full on hover / current. */
+header.kc-header > nav a { color: inherit !important; opacity: 0.75; transition: opacity 0.2s ease; }
+header.kc-header > nav a:hover, header.kc-header > nav a.is-current, header.kc-header > nav a.is-active, header.kc-header > nav a[aria-current] { opacity: 1; }
+/* Case headers scroll away with the page (no sticky, no hide-on-scroll). */
+header.kc-header--flow { position: relative !important; top: auto !important; }
+header.kc-header--overlay { position: absolute !important; }
+header.kc-header, header.kc-header.is-hidden { transform: none !important; }
+/* Footer, same on every case page: dark band, label + project name left, BACK TO TOP right,
+   aligned to the 1400px content column; room underneath for the dock. */
+.kc-footer { background: #03050a; color: #e9eef4; padding: 110px max(var(--gutter), calc((100% - 1400px) / 2)) 120px; border-top: 1px solid rgb(255 255 255 / 0.06); }
+.kc-footer-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.kc-footer-inner > div > span { display: block; font: 500 12px/1.2 "JetBrains Mono", ui-monospace, monospace; letter-spacing: 0.16em; color: #8fa6c4; }
+.kc-footer strong { display: block; margin-top: 22px; font: 700 32px/1.1 "Inter", "Noto Sans TC", system-ui, sans-serif; letter-spacing: -0.03em; color: #f2f6fb; }
+.kc-footer a { font: 600 12px/1.2 "JetBrains Mono", ui-monospace, monospace; letter-spacing: 0.16em; color: #8ccfff; text-decoration: none; padding-bottom: 6px; }
+.kc-footer a:hover { color: #fff; }
+@media (max-width: 760px) { .kc-footer { padding: 72px 20px 110px; } .kc-footer strong { font-size: 26px; } }
+/* Phones: no page nav in the header (it would wrap); the dock handles navigation there. */
+@media (max-width: 760px) { header.kc-header > nav { display: none !important; } }
+/* Light pages: light footer. */
+.kc-footer--light { background: #f3f5f8; color: #182033; border-top-color: rgb(15 23 42 / 0.08); }
+.kc-footer--light .kc-footer-inner > div > span { color: #6b7686; }
+.kc-footer--light strong { color: #121a2b; }
+.kc-footer--light a { color: var(--kc-accent, #1d5fc4); }
+.kc-footer--light a:hover { color: #121a2b; }
+
+/* Section labels ("01 / HOW IT WORKS"), same on every case page. */
+.kc-label-row { border: 0 !important; padding-top: 0 !important; justify-content: flex-start !important; gap: 0 !important; }
+.kc-label-row::before, .kc-label-row::after, .kc-label::before, .kc-label::after { content: none !important; display: none !important; }
+.kc-label {
+  display: block !important; margin-left: 0 !important; padding: 0 !important; border: 0 !important; background: none !important;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace !important;
+  font-size: 12px !important; line-height: 16px !important; font-weight: 500 !important;
+  letter-spacing: 0.16em !important; text-transform: uppercase !important;
+  color: var(--kc-accent, #8ccfff) !important;
+}
+/* Phone: never let the page pan sideways (iOS Safari ignores overflow-x on body alone). */
+@media (max-width: 760px) { html, body { overflow-x: clip; } }
+/* Anything that opens the image viewer shows the same magnifier cursor. */
+[data-lightbox], [data-image], [data-enlarge], [data-lightbox] *, [data-image] *, [data-enlarge] * { cursor: zoom-in !important; }

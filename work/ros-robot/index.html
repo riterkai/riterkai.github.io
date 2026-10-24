@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <script src="/shared/locale-route.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="ROS 機器人數據可視化平台：以 AI-native 方式設計與開發，把機器人影片、MR 畫面與運動數據放在同一條時間軸上診斷。">
+  <title>ROS 機器人數據可視化平台｜Kevin Chang</title>
+  <link rel="stylesheet" href="/shared/fonts/google-eeca43cd51fa.css">
+  <link rel="stylesheet" href="../../shared/type.css">
+  <link rel="stylesheet" href="styles.css?v=caps2">
+  <script src="script.js?v=6" defer></script>
+  <script src="../../shared/transition.js?v=lite1"></script>
+  <link rel="stylesheet" href="../../shared/case-shell.css?v=clip1">
+  <link rel="stylesheet" href="../../shared/case-kv.css?v=1792900501">
+  <script src="../../shared/projects.js?v=1791949592" defer></script>
+  <script src="../../shared/case-shell.js?v=1792900102" defer data-slug="ros-robot"></script>
+  <link rel="stylesheet" href="../../shared/language.css?v=2">
+  <script src="../../shared/vendor/opencc-t2cn.js" defer></script>
+  <script src="../../shared/english.js?v=1" defer></script>
+  <script src="../../shared/language.js?v=2" defer></script>
+<link rel="stylesheet" href="../../shared/kv-eyebrow.css?v=1">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至內容</a>
+
+  <header class="header">
+    <a class="brand" href="#top" aria-label="回到頁首"><span class="brand-mark" aria-hidden="true"></span><span>KEVIN CHANG<small>PORTFOLIO / AI-NATIVE TOOL</small></span></a>
+    <nav aria-label="頁面導覽"><a href="#top">概念</a><a href="#demo">互動 Demo</a><a href="#outcome">成果</a><a href="#process">製作流程</a></nav>
+    <span class="header-meta">VIBE CODING · 2026</span>
+  </header>
+
+  <main id="main">
+    <!-- 01 / What it is -->
+    <section data-kv class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid" data-kv-grid>
+        <div class="hero-copy" data-kv-copy>
+          <p class="eyebrow kc-kv-eyebrow" data-kv-eyebrow><span class="kc-kv-dot" aria-hidden="true"></span><span>AI-NATIVE</span><span class="kc-kv-rule" aria-hidden="true"> - </span><span class="kc-kv-topic">XR &amp; ROBOT DATA PLATFORM</span></p>
+          <h1 id="hero-title">ROS 機器人<br><em>數據可視化平台</em></h1>
+          <p class="hero-lead" data-kv-lead>透過AI Native 開發的機器人表現以及軌跡分析工具，讓開發者能夠在同一個時間軸上同步查看機器人移動影片、XR 虛擬實境畫面與運動數據對比以及分析，進行Debug。</p>
+          <button data-kv-cta class="button" type="button" data-demo-open>直接操作 Demo</button>
+        </div>
+        <figure class="hero-shot" data-kv-art>
+          <button class="shot-slot" id="shot-slot" type="button" data-demo-open aria-label="往下直接操作平台"><img src="assets/live-main.jpg" alt="平台主畫面：雙影片、軌跡圖、數值卡片與折線圖"><span class="shot-hint">點擊往下直接操作 ↓</span></button>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Demo: one full screen right under the hero -->
+    <section class="demo-screen" id="demo" aria-label="ROS 機器人數據可視化平台互動 Demo"></section>
+
+    <section class="section problem" id="problem" aria-labelledby="problem-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-no">01 / PROBLEM</p>
+          <h2 id="problem-title">該平台核心解決問題</h2>
+          <p>機器人影片、XR 畫面與運動數據分散在不同檔案，開發者需要反覆打開檔案、手動對齊時間才能找出異常。將資料整合在同一條時間軸，讓問題發生當下的畫面、軌跡與數值能直接對照分析。</p>
+        </div>
+        <div class="compare">
+          <div class="cmp cmp-old">
+            <span class="cmp-label">以前：讀 CSV 與 log</span>
+            <ol><li>開多個 CSV、log 視窗逐一對照</li><li>回放影片找出問題發生的那一秒</li><li>截圖、手動對齊時間再比對數值</li></ol>
+          </div>
+          <div class="cmp-arrow" aria-hidden="true">→</div>
+          <div class="cmp cmp-new">
+            <span class="cmp-label">現在：同一條時間軸</span>
+            <ol><li>影片、軌跡與數據自動同步</li><li>點圖表直接跳到該時間點的畫面</li><li>異常點當下就能對照所有資料來源</li></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / Outcome -->
+    <section class="section outcome" id="outcome" aria-labelledby="outcome-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-no">02 / FEATURES</p>
+          <h2 id="outcome-title">主要核心功能</h2>
+          <p>應用在 XR 環境中的機器人，需要準確停在虛擬物件顯示位置，提供使用者可以觸碰的實體支撐。該平台協助開發者診斷機器人表現是否異常。</p>
+        </div>
+
+        <div class="caps">
+          <article>
+            <span class="cap-no">01</span>
+            <h3>虛實位置一致性</h3>
+            <p>用演算法比對機器人座標與 ArUco 追蹤到的位置，驗證虛實一致性。</p>
+            <img src="assets/feature-dtw.png?v=2" alt="機器人軌跡與 ArUco 軌跡疊合，顯示 DTW 相似度分析" loading="lazy">
+          </article>
+          <article>
+            <span class="cap-no">02</span>
+            <h3>機器人表現診斷</h3>
+            <p>前進時 PWM 與速度是否對得上？從各項數值的趨勢一起看，快速定位是控制、硬體還是指令問題。</p>
+            <img src="assets/feature-diagnosis.jpg?v=2" alt="PWM、速度與角速度的即時數值與時間軸折線圖" loading="lazy">
+          </article>
+          <article>
+            <span class="cap-no">03</span>
+            <h3>AI 數據診斷助手</h3>
+            <p>透過當下截圖，搭配規則文件請模型產出「摘要、一致性、異常、原因、建議」五段分析。</p>
+            <div class="ai-sample" aria-label="AI 回覆示意">
+              <p><b>1. 行為摘要</b>正在前往目標點 2，剩餘 1.62m，尚未進入減速範圍。</p>
+              <p><b>2. 數據一致性</b>⚠ cmd_w=0.84 與 real_w=0.21 落差偏大</p>
+              <p><b>5. 修正建議</b>確認最小 PWM 死區補償與轉向增益。</p>
+            </div>
+          </article>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- 04 / Process -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-no">03 / PROCESS</p>
+          <h2 id="process-title">AI Native 工作流程，<br><em>從需求釐清到功能迭代。</em></h2>
+          <p>該工作流有別於傳統方式，沒有先畫完整設計稿再進行開發，而是用 AI 先做出來，再透過 Figma 修視覺。</p>
+        </div>
+        <div class="flow" role="tablist" aria-label="製作環節" id="flow"></div>
+        <div class="step" id="step" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section open-section" aria-label="開源專案">
+      <div class="wrap">
+        <div class="open">
+          <div>
+            <span class="open-label">OPEN SOURCE</span>
+            <h3>開源給其他替代實境機器人研究使用</h3>
+            <p>只要匯出機器人的導航 log 與錄影，放進資料夾就能回放、比對與診斷；整個平台只需要一個 Python Flask server，用瀏覽器開啟即可。</p>
+          </div>
+          <div class="open-side">
+            <ul class="stack" aria-label="技術">
+              <li>ROS2</li><li>Unity</li><li>Meta Quest 3</li><li>ArUco Marker</li><li>Python Flask</li><li>HTML · JS Canvas</li><li>Claude Code</li><li>Figma</li>
+            </ul>
+            <a class="button" href="https://github.com/riterkai/sr-robot-validation-platform" target="_blank" rel="noopener">GitHub 原始碼 ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- The live platform: placed over the hero slot, flies to the demo slot -->
+    <div class="demo-float" id="demo-float" data-state="hero">
+        <div class="demo-stage" id="demo-frame"><iframe src="demo/" title="ROS 機器人數據可視化平台互動 Demo" allow="fullscreen"></iframe></div>
+        <div class="demo-dock">
+          <p class="dock-label" id="dock-label">試試看：</p>
+          <ol class="guide" id="demo-guide" aria-labelledby="dock-label">
+            <li><button type="button" data-guide="play">播放運動軌跡</button></li>
+            <li><button type="button" data-guide="traj">分析軌跡圖</button></li>
+            <li><button type="button" data-guide="ai">AI 助手</button></li>
+          </ol>
+        </div>
+    </div>
+  </main>
+
+
+  <footer class="footer"><div class="wrap"><span>ROS 機器人數據可視化平台 · Kevin Chang</span><span>Designed &amp; built with Claude Code + Figma</span></div></footer>
+</body>
+</html>

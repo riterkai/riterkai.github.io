@@ -1,0 +1,100 @@
+/* Figma Page 7: 300:51770 / 300:52058 / 300:52503. Only these three KVs. */
+#top:is(.kv-beanfun,.kv-shopline-group-buy,.kv-brand-ui){--kv-top:84.15px;--kv-bottom:84.15px;--kv-art-h:480px}
+#top:is(.kv-beanfun,.kv-shopline-group-buy,.kv-brand-ui) [data-kv-copy] h1{font-size:clamp(40px,4.9vw,70px)!important;line-height:1.17!important}
+#top.kv-beanfun .hero-grid{grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr)!important;gap:0!important}
+#top.kv-beanfun .hero-lede{margin-top:26px!important}
+#top.kv-beanfun .hero-actions{margin-top:33px!important}
+#top.kv-shopline-group-buy{background:#fff}
+#top.kv-brand-ui .explore-projects{margin-top:36px!important}
+#top.kv-beanfun [data-kv-art]{width:92.79%!important;height:auto!important;aspect-ratio:561.188/575.294;display:block!important;position:relative!important;transform:none!important;zoom:1!important}
+#top.kv-beanfun .hero-screen-back{width:39.352%;height:78.71%;left:11.28%;top:8.87%;right:auto;padding:1.323%;border-radius:24px}
+#top.kv-beanfun .hero-screen-front{width:43.319%;height:89.354%;left:48.08%;top:.8%;right:auto;padding:1.323%;border-radius:24px}
+#top.kv-beanfun .screen img{height:100%;width:100%;object-fit:cover;border-radius:18px}
+#top.kv-beanfun .orbit-one{width:97.55%;height:77.42%;left:-4.1%;top:5.6%;transform:rotate(-16deg)}
+#top.kv-beanfun .orbit-two{width:76.06%;height:59.68%;left:9.1%;top:13.7%;transform:rotate(-16deg)}
+#top.kv-beanfun .spark-one{left:9.92%;top:-1.77%;font-size:39px}
+#top.kv-beanfun .spark-two{left:91.8%;top:65.24%;right:auto;bottom:auto;font-size:39px}
+#top.kv-brand-ui .hero-phones[data-kv-art]{width:min(100%,440px)!important;height:auto!important;aspect-ratio:440/488;display:block!important;position:relative!important;zoom:1!important;transform:none!important}
+#top.kv-brand-ui .hero-phones img{width:54.773%;height:auto;max-width:none}
+#top.kv-brand-ui .phone-a{left:.18%;right:auto;top:-6.47%;transform:rotate(-5deg)}
+#top.kv-brand-ui .phone-b{left:32.4%;right:auto;top:1.9%;transform:rotate(4deg)}
+#top.kv-shopline-group-buy[data-kv] .kv-phones[data-kv-art]{width:100%!important;height:auto!important;aspect-ratio:598/480;display:block!important;position:relative!important}
+#top.kv-shopline-group-buy[data-kv] .kv-p1{width:37.075%!important;height:auto!important;left:17.9%!important;right:auto!important;top:1.3%!important;border-width:10px;border-radius:47px}
+#top.kv-shopline-group-buy[data-kv] .kv-p2{width:40.462%!important;height:auto!important;left:50.5%!important;right:auto!important;top:-6.7%!important;border-width:10px;border-radius:47px}
+#top.kv-shopline-group-buy[data-kv] .kv-p1 img{margin-top:-460.21%}
+#top.kv-shopline-group-buy[data-kv] .kv-p2 img{margin-top:-701.32%}
+@media(min-width:761px){
+ #top:is(.kv-beanfun,.kv-shopline-group-buy,.kv-brand-ui) [data-kv-grid]{grid-template-rows:480px!important}
+ #top.kv-beanfun [data-kv-art]{margin-top:-33.3px!important;justify-self:end!important;align-self:start!important}
+ #top.kv-brand-ui .hero-phones[data-kv-art],#top.kv-shopline-group-buy[data-kv] .kv-phones[data-kv-art]{margin-top:0!important;align-self:start!important;justify-self:end!important}
+}
+@media(max-width:760px){
+ #top:is(.kv-beanfun,.kv-shopline-group-buy,.kv-brand-ui){--kv-top:48px;--kv-bottom:64px}
+ #top.kv-beanfun .hero-grid{grid-template-columns:minmax(0,1fr)!important;gap:48px!important}
+ #top.kv-beanfun [data-kv-art]{width:min(90%,360px)!important;margin:0 auto!important;justify-self:center!important}
+ #top.kv-brand-ui .hero-phones[data-kv-art]{width:min(78%,280px)!important;margin:0 auto!important;justify-self:center!important}
+ #top.kv-shopline-group-buy[data-kv] .kv-phones[data-kv-art]{width:min(100%,360px)!important;margin:0 auto!important;justify-self:center!important}
+ #top.kv-shopline-group-buy[data-kv] .kv-phone{border-width:6px;border-radius:28px}
+}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ #top.kv-brand-ui .phone-a:hover,#top.kv-brand-ui .phone-b:hover{transform:translateY(-8px) rotate(0)}
+}
+#top.kv-shopline-group-buy[data-kv] .kv-phones[data-kv-art]{aspect-ratio:598/480!important;min-height:0!important}
+#top.kv-shopline-group-buy[data-kv] .kv-phone{aspect-ratio:9/19.3!important}
+/* Figma 300:51784 specifies white CTA text and arrow. */
+#top.kv-beanfun [data-kv-cta] > a,
+#top.kv-beanfun [data-kv-cta] > a span{color:#fff!important}
+
+/* Explicit Figma geometry; outrank the previous section#top[data-kv] height rules. */
+#top.kv-shopline-group-buy[data-kv] .kv-p1{left:17.936%!important;top:1.503%!important;aspect-ratio:221.707/474.926!important;border-width:10.129px;border-radius:47.268px}
+#top.kv-shopline-group-buy[data-kv] .kv-p2{left:50.622%!important;top:-6.679%!important;aspect-ratio:241.965/518.818!important;border-width:10.129px;border-radius:47.268px}
+@media(max-width:760px){#top.kv-shopline-group-buy[data-kv] .kv-phone{border-width:6px;border-radius:28px}}
+
+/* Figma 300:49591: position the visible glasses at grid y=110.635, not copy center. */
+#top.kv-ai-glasses{--kv-top:84.15px;--kv-bottom:84.15px;--kv-art-h:480px}
+@media(min-width:761px){
+ #top.kv-ai-glasses[data-kv] [data-kv-grid]{grid-template-rows:480px!important}
+ #top.kv-ai-glasses[data-kv] .hero-art[data-kv-art]{align-self:start!important;display:block!important;width:100%!important;height:auto!important;aspect-ratio:598/266.328!important;margin-top:110.635px!important}
+}
+/* Figma 300:49930: a 649px hero with the 1440x810 photo moved up 87px. */
+@media(min-width:761px){
+ #top.kv-mach-e{height:649px!important;min-height:649px!important;max-height:none;display:block;position:relative;overflow:hidden;background:#181516}
+ #top.kv-mach-e .hero-photo{inset:auto;left:4.166667%;top:calc(-6.041667vw);width:100%;height:auto;aspect-ratio:16/9;position:absolute;overflow:hidden}
+ #top.kv-mach-e .hero-photo img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;mask-image:none;-webkit-mask-image:none}
+ #top.kv-mach-e .hero-photo:before{background:linear-gradient(90deg,rgba(5,11,20,.55),rgba(5,11,20,0) 45%)}
+ #top.kv-mach-e .hero-copy{position:relative;height:auto;max-width:none;width:100%;padding:130.15px 0 0 max(90px,calc((100vw - 1260px)/2))!important;display:block;transform:none;box-sizing:border-box}
+ #top.kv-mach-e .hero-copy .hero-kicker{position:absolute;top:84.15px;left:max(90px,calc((100vw - 1260px)/2));margin:0!important;font-size:12px;line-height:14px;letter-spacing:2.64px}
+ #top.kv-mach-e .hero-copy>h1{margin:0!important;font-family:Arial,Helvetica,sans-serif;font-size:70px!important;line-height:81.9px!important;letter-spacing:-4.9px;font-weight:400}
+ #top.kv-mach-e .hero-copy>h1 strong{font-weight:400}
+ #top.kv-mach-e .hero-zh{margin:24px 0 17px;font-size:28px;line-height:40px;letter-spacing:3.36px}
+ #top.kv-mach-e .hero-intro{width:435px;max-width:38vw;font-size:16px;line-height:28px;margin:0;color:#dcdcdc}
+ #top.kv-mach-e .text-link{margin-top:37px;width:184px;padding-bottom:12px;font-size:14px;line-height:20px;color:#fff}
+}
+@media(min-width:761px) and (max-width:1199px){
+ #top.kv-mach-e .hero-copy{padding-left:32px!important}
+ #top.kv-mach-e .hero-copy .hero-kicker{left:32px;font-size:10px;letter-spacing:1px}
+ #top.kv-mach-e .hero-copy>h1{font-size:clamp(40px,4.9vw,70px)!important;line-height:1.17!important}
+ #top.kv-mach-e .hero-photo{width:1440px;left:calc(100% - 1380px);top:-87px}
+}
+@media(max-width:760px){#top.kv-ai-glasses{--kv-top:48px;--kv-bottom:64px}}
+
+/* Blend the shifted photo into a full-width surface without moving or resizing the car. */
+@media(min-width:761px){
+ #top.kv-mach-e{background:#0a0e15}
+ #top.kv-mach-e .hero-photo{
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 min(12%,180px));
+  mask-image:linear-gradient(90deg,transparent 0,#000 min(12%,180px));
+ }
+}
+
+/* VR frame 300:53568: taller first screen, title and description moved upward. */
+@media(min-width:1101px){
+ .kv-htc-vr.hero{height:651px;min-height:651px}
+ .kv-htc-vr .hero-inner{height:651px;min-height:651px;padding:0;display:block}
+ .kv-htc-vr .eyebrow{position:absolute;top:85px;left:0;right:0;height:14px;font-size:12px;line-height:14px;letter-spacing:1.8px}
+ .kv-htc-vr h1{position:absolute;left:0;top:137.5px;margin:0;font-size:100px;line-height:96px;letter-spacing:-5px}
+ .kv-htc-vr h1 em{font-size:inherit;line-height:inherit}
+ .kv-htc-vr .hero-bottom{position:absolute;left:0;right:0;top:405px;height:80px;margin:0;padding:0;align-items:end}
+ .kv-htc-vr .hero-zh{font-size:28px;line-height:40px;letter-spacing:-1.12px}
+ .kv-htc-vr .hero-object{left:68.095238%;top:135.52px;width:320px;margin:0;transform:none}
+}

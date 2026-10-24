@@ -1,0 +1,40 @@
+/* Compact, keyboard-accessible script switch, shared by the portal and nine cases. */
+header > .kc-language {
+  display:inline-flex;align-items:center;justify-self:end;flex:none;gap:2px;
+  padding:3px;border:1px solid currentColor;border-color:color-mix(in srgb,currentColor 25%,transparent);
+  border-radius:999px;color:inherit;background:transparent;white-space:nowrap;
+  font:500 12px/20px "Inter","Noto Sans TC","PingFang SC",system-ui,sans-serif;
+}
+header > .kc-language button {
+  appearance:none;display:block;min-width:44px;min-height:28px;padding:4px 10px;margin:0;
+  border:0;border-radius:999px;background:transparent;color:inherit;cursor:pointer;
+  font:inherit;letter-spacing:0;text-transform:none;box-shadow:none;
+}
+header > .kc-language button[aria-pressed="true"] {background:color-mix(in srgb,currentColor 14%,transparent);font-weight:700}
+header > .kc-language button:hover {background:color-mix(in srgb,currentColor 9%,transparent)}
+header > .kc-language button:focus-visible {outline:2px solid currentColor;outline-offset:3px}
+header.topbar {gap:24px}
+header.topbar > nav {margin-left:auto}
+@media(max-width:760px){
+  header > .kc-language {margin-left:auto}
+  header.topbar {gap:12px;flex-wrap:wrap;height:auto;min-height:64px;padding-top:12px;padding-bottom:12px}
+  header.topbar > nav {order:3;flex-basis:100%;justify-content:center;margin:0;gap:24px}
+  header.kc-header {gap:12px!important;justify-content:space-between!important}
+}
+@media(min-width:761px) and (max-width:1000px){header.kc-header > nav{gap:12px!important}header.kc-header{column-gap:16px!important}}
+/* Keep the shared brand visible even on cases whose legacy mobile CSS hides .brand span. */
+header.kc-header .kc-brand > .kc-ring{display:block!important}
+header.kc-header .kc-brand > .kc-brand-text{display:flex!important}
+@media(max-width:760px){header > .kc-language button{min-height:36px}header > .kc-language{min-height:44px}}
+/* English copy has a longer measure; allow natural wrapping without widening the page. */
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{overflow-wrap:normal;word-break:normal}
+html[lang="en"] header.kc-header > nav{white-space:nowrap}
+@media (min-width:761px) and (max-width:1100px){html[lang="en"] header.kc-header > nav{display:none!important}html[lang="en"] header.kc-header{display:flex!important;justify-content:space-between!important}}
+@media(max-width:400px){
+ header.kc-header .kc-brand{gap:8px!important}
+ header.kc-header .kc-brand .kc-ring{width:18px;height:18px}
+ header.kc-header .kc-brand-text b{font-size:10px;letter-spacing:.1em}
+ header.kc-header .kc-brand-text small{font-size:8px}
+ header > .kc-language button{padding-inline:8px;min-width:40px}
+ header.topbar .logo{gap:8px;font-size:11px;letter-spacing:.1em}
+}
